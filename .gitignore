@@ -3,5 +3,4 @@
 .RData
 .Ruserdata
 site_libs
-posts
-*.html
+docs

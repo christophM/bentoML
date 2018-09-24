@@ -3,7 +3,7 @@ title: "bentoML, the bento box of machine learning"
 description: |
   Machine learning beyond performance optimization.
 base_url: bentoml.com
-output_dir: posts
+output_dir: "docs"
 navbar:
   title: "bentoML"
   logo: images/bento.png

@@ -5,6 +5,7 @@ description: |
 author:
   - name: Christoph Molnar
 date: 09-24-2018
+slug: hello
 output:
   radix::radix_article:
     self_contained: false
