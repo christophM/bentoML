@@ -1,0 +1,60 @@
+---
+title: "More than sushi"
+description: |
+  Machine learning beyond loss minimization.
+author:
+  - name: Christoph Molnar
+date: 09-24-2018
+output:
+  radix::radix_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+Optimizing the hell out of a problem can be fun.
+Like Kaggle type of fun. 
+Rising on the ladder, making the machine learning model more and more accurate.
+Machine learning is like Sushi, or rather Sashimi.
+Sashimi is a Japanese dish, which consists of raw fish.
+It's very tasty.
+<aside>
+If you don't like fish, just think of some other food.
+</aside>
+TODO: ADD aside-tag with Sashimi
+
+It's easy to get the impression that machine learning consists of finding the best machine learning model.
+Especially if you take part in competitions.
+You can't have Sashimi all the time, but for a healthy diet you have to add a variety of foods.
+The same is true for machine learning projects.
+Machine learning models optimization is just one part of it.
+The model has a context, lots of context actually.
+It comes from data, affects decisions, influences human behaviour, has unintended consequences, is embedded in a product or process.
+
+In real life, machine learning  projects need a lot more ingredients to be successful:
+
+- Finding a meaningful optimization goal in the first place.
+- Good, unbiased, goal-relevant data
+- Model interpretation.
+- Ethical considerations.
+- The context of the application.
+- The people it affects.
+
+Moving again to Japanese food (yummy!), the best analogue is a bento box. 
+A bento box is a box with many compartments with a variety of foods. 
+The machine learning model is just one part of those ingredients.
+
+TODO: aside with bento box.
+
+TODO: aside with bento-box with data science stuff.
+
+
+As you might, know, I am writing a book about Interpretable Machine Learning, which is another part of the bento box. 
+
+One of the other most important parts is the data that comes into this 
+
+
+

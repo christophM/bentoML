@@ -1,0 +1,19 @@
+name: "bentoML"
+title: "bentoML, the bento box of machine learning"
+description: |
+  Machine learning beyond performance optimization.
+base_url: bentoml.com
+output_dir: posts
+navbar:
+  title: "bentoML"
+  logo: images/bento.png
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: radix::radix_article
+collections:
+  posts:
+    disqus: bentoml
+    share: [twitter, linkedin]
