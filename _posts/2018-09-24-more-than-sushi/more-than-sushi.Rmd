@@ -1,7 +1,7 @@
 ---
-title: "More than sushi"
+title: "Beyond loss minimization."
 description: |
-  Machine learning beyond loss minimization.
+  More than sushi: Ml is a bento box.
 author:
   - name: Christoph Molnar
 date: 09-24-2018
@@ -15,17 +15,31 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+The good times. 
+Staying up late, slurping energy drink.
+Having more ideas, building more features, running that new model, uploading it. 
+Crossing the fingers, hoping to climb on that kaggle leaderboard.
+(Only to realize that you actually made your model worse,  then go to bad and have bad dreams.)
+It's fun, it's adddicitive.
+Like a slot machine where you want to have a higher score, and eventually earn lots of money.
+It fits perfect into our current design of the world, where we optimize stuff, try to hit monthly goals at work, 
+get that body weight to a certain number, track how much we sleep.
+Understanding machine learning methods, their in's and out, getting cross validation, optimization and so on takes time and is not super easy.
+But once you get the hang of it, it's actually quite easy, almost stupid, you are simply chasing the best score.
+The most juicy part might even be feature engineering or how you frame the problem. 
+But once you have that there is not much to do, because it can even be automated,  see emerging frameworks like autoxgboost or H20.
 
-Optimizing the hell out of a problem can be fun.
-Like Kaggle type of fun. 
-Rising on the ladder, making the machine learning model more and more accurate.
-Machine learning is like Sushi, or rather Sashimi.
+This - kind of addictive - model training (loss minimization) is like Sashimi. 
+Pure, (literally) raw, simple and perfect.
+(If you don't like raw fish, insert some food you like a lot.)
+ Machine learning is like Sushi, or rather Sashimi.
 Sashimi is a Japanese dish, which consists of raw fish.
 It's very tasty.
+
 <aside>
-If you don't like fish, just think of some other food.
+<div about='https://farm6.static.flickr.com/5609/15346295977_67b3f7da58_m.jpg'><a href='https://www.flickr.com/photos/phonakins/15346295977/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm6.static.flickr.com/5609/15346295977_67b3f7da58_m.jpg' alt='salmon sashimi by phonakins, on Flickr' title='salmon sashimi by phonakins, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/phonakins/15346295977/' target='_blank'>salmon sashimi</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc-nd/2.0/' target='_blank'>CC BY-NC-ND 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/phonakins/' target='_blank'>phonakins</a></div>
 </aside>
-TODO: ADD aside-tag with Sashimi
+
 
 It's easy to get the impression that machine learning consists of finding the best machine learning model.
 Especially if you take part in competitions.
@@ -34,6 +48,15 @@ The same is true for machine learning projects.
 Machine learning models optimization is just one part of it.
 The model has a context, lots of context actually.
 It comes from data, affects decisions, influences human behaviour, has unintended consequences, is embedded in a product or process.
+
+
+
+It’s easy to get the impression that machine learning consists of finding the best machine learning model. Especially if you take part in competitions. 
+You can’t have Sashimi all the time, but for a healthy diet you have to add a variety of foods. 
+The same is true for machine learning projects. Machine learning models optimization is just one part of it. 
+The model has a context, lots of context actually. 
+It comes from data, affects decisions, influences human behaviour, has unintended consequences, is embedded in a product or process.
+
 
 In real life, machine learning  projects need a lot more ingredients to be successful:
 
@@ -47,10 +70,10 @@ In real life, machine learning  projects need a lot more ingredients to be succe
 Moving again to Japanese food (yummy!), the best analogue is a bento box. 
 A bento box is a box with many compartments with a variety of foods. 
 The machine learning model is just one part of those ingredients.
+<aside>
+<div about='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg'><a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a></div>
+</aside>
 
-TODO: aside with bento box.
-
-TODO: aside with bento-box with data science stuff.
 
 
 As you might, know, I am writing a book about Interpretable Machine Learning, which is another part of the bento box. 
@@ -58,4 +81,7 @@ As you might, know, I am writing a book about Interpretable Machine Learning, wh
 One of the other most important parts is the data that comes into this 
 
 
+TODO: Setup Disqus
+TODO: favicon
+TODO: Netlify
 
