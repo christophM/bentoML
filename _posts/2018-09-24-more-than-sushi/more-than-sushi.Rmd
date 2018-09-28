@@ -84,4 +84,5 @@ One of the other most important parts is the data that comes into this
 TODO: Setup Disqus
 TODO: favicon
 TODO: Netlify
+TODO: Thanks people on Flickr for the photos
 
