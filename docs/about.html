@@ -19,26 +19,26 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>bentoML, the bento box of machine learning: About me</title>
+  <title>bentoML, the bento box of machine learning: About</title>
   
   
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="bentoML, the bento box of machine learning: About me"/>
+  <meta property="og:title" content="bentoML, the bento box of machine learning: About"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="bentoML, the bento box of machine learning"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="bentoML, the bento box of machine learning: About me"/>
+  <meta property="twitter:title" content="bentoML, the bento box of machine learning: About"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["About me"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["About"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1216,8 +1216,82 @@
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  /* Style inputs with type="text", select elements and textareas */
+  .cform input[type=text], select, textarea {
+      width: 100%; /* Full width */
+  //    padding: 5px; /* Some padding */
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+  //    box-sizing: border-box; /* Make sure that padding and width stays in place */
+  //    margin-top: 6px; /* Add a top margin */
+  //    margin-bottom: 16px; /* Bottom margin */
+  }
+  
+  .cform input[type=email] {
+      width: 100%; /* Full width */
+  //    padding: 2px; /* Some padding */
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+  //    box-sizing: border-box; /* Make sure that padding and width stays in place */
+  //    margin-top: 6px; /* Add a top margin */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  .cform button[type=submit] {
+      background-color: $blue;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  .cform input[type=submit]:hover {
+      background-color: #45a049;
+  }
+  
+  .radix-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #455a64;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .radix-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .radix-site-nav a:hover {
+    color: white;
+  }
+  
+  .radix-site-header {
+  }
+  
+  .radix-site-footer {
+  }
+  
+  @media print {
+    .radix-site-nav {
+      display: none;
+    }
+  }
+  
+  .cc-window{opacity:1;transition:opacity 1s ease}.cc-window.cc-invisible{opacity:0}.cc-animate.cc-revoke{transition:transform 1s ease}.cc-animate.cc-revoke.cc-top{transform:translateY(-2em)}.cc-animate.cc-revoke.cc-bottom{transform:translateY(2em)}.cc-animate.cc-revoke.cc-active.cc-bottom,.cc-animate.cc-revoke.cc-active.cc-top,.cc-revoke:hover{transform:translateY(0)}.cc-grower{max-height:0;overflow:hidden;transition:max-height 1s}
+  .cc-link,.cc-revoke:hover{text-decoration:underline}.cc-revoke,.cc-window{position:fixed;overflow:hidden;box-sizing:border-box;font-family:Helvetica,Calibri,Arial,sans-serif;font-size:16px;line-height:1.5em;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;z-index:9999}.cc-window.cc-static{position:static}.cc-window.cc-floating{padding:2em;max-width:24em;-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner{padding:1em 1.8em;width:100%;-ms-flex-direction:row;flex-direction:row}.cc-revoke{padding:.5em}.cc-header{font-size:18px;font-weight:700}.cc-btn,.cc-close,.cc-link,.cc-revoke{cursor:pointer}.cc-link{opacity:.8;display:inline-block;padding:.2em}.cc-link:hover{opacity:1}.cc-link:active,.cc-link:visited{color:initial}.cc-btn{display:block;padding:.4em .8em;font-size:.9em;font-weight:700;border-width:2px;border-style:solid;text-align:center;white-space:nowrap}.cc-banner .cc-btn:last-child{min-width:140px}.cc-highlight .cc-btn:first-child{background-color:transparent;border-color:transparent}.cc-highlight .cc-btn:first-child:focus,.cc-highlight .cc-btn:first-child:hover{background-color:transparent;text-decoration:underline}.cc-close{display:block;position:absolute;top:.5em;right:.5em;font-size:1.6em;opacity:.9;line-height:.75}.cc-close:focus,.cc-close:hover{opacity:1}
+  .cc-revoke.cc-top{top:0;left:3em;border-bottom-left-radius:.5em;border-bottom-right-radius:.5em}.cc-revoke.cc-bottom{bottom:0;left:3em;border-top-left-radius:.5em;border-top-right-radius:.5em}.cc-revoke.cc-left{left:3em;right:unset}.cc-revoke.cc-right{right:3em;left:unset}.cc-top{top:1em}.cc-left{left:1em}.cc-right{right:1em}.cc-bottom{bottom:1em}.cc-floating>.cc-link{margin-bottom:1em}.cc-floating .cc-message{display:block;margin-bottom:1em}.cc-window.cc-floating .cc-compliance{-ms-flex:1;flex:1}.cc-window.cc-banner{-ms-flex-align:center;align-items:center}.cc-banner.cc-top{left:0;right:0;top:0}.cc-banner.cc-bottom{left:0;right:0;bottom:0}.cc-banner .cc-message{-ms-flex:1;flex:1}.cc-compliance{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:justify;align-content:space-between}.cc-compliance>.cc-btn{-ms-flex:1;flex:1}.cc-btn+.cc-btn{margin-left:.5em}
+  @media print{.cc-revoke,.cc-window{display:none}}@media screen and (max-width:900px){.cc-btn{white-space:normal}}@media screen and (max-width:414px) and (orientation:portrait),screen and (max-width:736px) and (orientation:landscape){.cc-window.cc-top{top:0}.cc-window.cc-bottom{bottom:0}.cc-window.cc-banner,.cc-window.cc-left,.cc-window.cc-right{left:0;right:0}.cc-window.cc-banner{-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner .cc-compliance{-ms-flex:1;flex:1}.cc-window.cc-floating{max-width:none}.cc-window .cc-message{margin-bottom:1em}.cc-window.cc-banner{-ms-flex-align:unset;align-items:unset}}
+  .cc-floating.cc-theme-classic{padding:1.2em;border-radius:5px}.cc-floating.cc-type-info.cc-theme-classic .cc-compliance{text-align:center;display:inline;-ms-flex:none;flex:none}.cc-theme-classic .cc-btn{border-radius:5px}.cc-theme-classic .cc-btn:last-child{min-width:140px}.cc-floating.cc-type-info.cc-theme-classic .cc-btn{display:inline-block}
+  .cc-theme-edgeless.cc-window{padding:0}.cc-floating.cc-theme-edgeless .cc-message{margin:2em 2em 1.5em}.cc-banner.cc-theme-edgeless .cc-btn{margin:0;padding:.8em 1.8em;height:100%}.cc-banner.cc-theme-edgeless .cc-message{margin-left:1em}.cc-floating.cc-theme-edgeless .cc-btn+.cc-btn{margin-left:0}
+  </style>
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="css/form.css" type="text/css"/>
+  <link rel="stylesheet" href="css/radix.css" type="text/css"/>
+  <link rel="stylesheet" href="css/cookieconsent.min.css" type="text/css"/>
 
 </head>
 
@@ -1226,7 +1300,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About me","authors":[]}
+{"title":"About","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1242,6 +1316,7 @@
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -1251,13 +1326,16 @@
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About me</h1>
+<h1>About</h1>
 
 </div>
 
 
 <div class="d-article">
-<p>test</p>
+<h1 id="about-bentoml">About bentoML</h1>
+<p>The bentoML blog is a space to learn about machine learning beyond model optimization. Machine learning models rely on data, implicit assumptions and have a context, yet many people focus on the model fitting as in performance optimization and it is easy to ignore such things. The name bentoML is inspired by the japanese lunchbox called “bento box” Model fitting (or training/optimization) is just one “dish” in the box, but machine learning consists of much more: the data, the context, the people it affects and so on.</p>
+<h1 id="about-me">About Me</h1>
+<p>My name is Christoph Molnar, I am a data scientist and PhD candidate in interpretable machine learning. I am passionate about using statistics and machine learning on data to make humans and machines smarter. And I am especially interested in making the decisions from algorithms more understandable for humans. <a href="https://www.dropbox.com/s/ixlm39ufuwoy7wc/cv-christoph-molnar.pdf?dl=1">CV (PDF)</a> <!-- # Authors --></p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1272,6 +1350,9 @@
 <div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
+<div class="radix-site-nav radix-site-footer">
+<p><a href="impressum.html">Impressum</a></p>
+</div>
 <!--/radix_placeholder_navigation_after_body-->
 
 </body>

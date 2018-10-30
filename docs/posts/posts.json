@@ -1,8 +1,8 @@
 [
   {
     "path": "posts/2018-09-24-more-than-sushi/",
-    "title": "Beyond loss minimization.",
-    "description": "More than sushi: Ml is a bento box.",
+    "title": "bentoML: Machine Learning Beyond Model Fitting",
+    "description": "More Than Sushi: ML is a Bento Box.",
     "author": [
       {
         "name": "Christoph Molnar",
@@ -11,7 +11,7 @@
     ],
     "date": "2018-09-24",
     "categories": [],
-    "preview": {},
-    "last_modified": "2018-10-29T08:46:30+01:00"
+    "preview": "posts/2018-09-24-more-than-sushi/images/bento.jpg",
+    "last_modified": "2018-10-30T09:47:35+00:00"
   }
 ]

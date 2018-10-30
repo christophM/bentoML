@@ -7,14 +7,15 @@
     <description>Machine learning beyond performance optimization.
 </description>
     <generator>Radix</generator>
-    <lastBuildDate>Sun, 23 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Sep 2018 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Beyond loss minimization.</title>
+      <title>bentoML: Machine Learning Beyond Model Fitting</title>
       <dc:creator>Christoph Molnar</dc:creator>
       <link>bentoml.com/posts/2018-09-24-more-than-sushi</link>
-      <description>More than sushi: Ml is a bento box.</description>
+      <description>More Than Sushi: ML is a Bento Box.</description>
       <guid>bentoml.com/posts/2018-09-24-more-than-sushi</guid>
-      <pubDate>Sun, 23 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
+      <media:content url="bentoml.com/posts/2018-09-24-more-than-sushi/images/bento.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
