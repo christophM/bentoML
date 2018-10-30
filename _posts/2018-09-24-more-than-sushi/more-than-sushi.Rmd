@@ -18,10 +18,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Welcome to bentoML.
 
-The bentoML blog is a space to learn about machine learning which goes beyond model optimization.
-Machine learning models rely on data, implicit assumptions and have a context, yet many people focus on the model fitting as in performance optimization and it is easy to ignore such things.
-The name bentoML is inspired by the japanese lunchbox called "bento box"
-Model fitting (or training/optimization) is just one "dish" in the box, but machine learning consists of much more: the data, the context, the people it affects  and so on.
+
 
 <aside>
 <div about='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg'><a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a></div>

@@ -1,5 +1,20 @@
 ---
-title: "About me"
+title: "About"
 ---
 
-test
+# About bentoML
+
+The bentoML blog is a space to learn about machine learning beyond model optimization.
+Machine learning models rely on data, implicit assumptions and have a context, yet many people focus on the model fitting as in performance optimization and it is easy to ignore such things.
+The name bentoML is inspired by the japanese lunchbox called "bento box"
+Model fitting (or training/optimization) is just one "dish" in the box, but machine learning consists of much more: the data, the context, the people it affects  and so on.
+
+# About Me
+My name is Christoph Molnar, I am a data scientist and PhD candidate in interpretable machine learning. 
+I am passionate about using statistics and machine learning on data to make humans and machines smarter.
+And I am especially interested in making the decisions from algorithms more understandable for humans. 
+<a href="https://www.dropbox.com/s/ixlm39ufuwoy7wc/cv-christoph-molnar.pdf?dl=1">CV (PDF)</a>
+<!-- # Authors -->
+
+
+

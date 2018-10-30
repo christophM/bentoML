@@ -44,12 +44,12 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","slug","output"]}},"value":[{"type":"character","attributes":{},"value":["bentoML: Machine Learning Beyond Model Fitting"]},{"type":"character","attributes":{},"value":["More Than Sushi: ML is a Bento Box.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Christoph Molnar"]}]}]},{"type":"character","attributes":{},"value":["09-24-2018"]},{"type":"character","attributes":{},"value":["hello"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","slug","output","preview"]}},"value":[{"type":"character","attributes":{},"value":["bentoML: Machine Learning Beyond Model Fitting"]},{"type":"character","attributes":{},"value":["More Than Sushi: ML is a Bento Box.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Christoph Molnar"]}]}]},{"type":"character","attributes":{},"value":["09-24-2018"]},{"type":"character","attributes":{},"value":["hello"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["images/bento.jpg"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["more-than-sushi_files/bowser-1.9.3/bowser.min.js","more-than-sushi_files/distill-2.2.21/template.v2.js","more-than-sushi_files/jquery-1.11.3/jquery.min.js","more-than-sushi_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["images/bento.jpg","images/iml.png","more-than-sushi_files/bowser-1.9.3/bowser.min.js","more-than-sushi_files/distill-2.2.21/template.v2.js","more-than-sushi_files/jquery-1.11.3/jquery.min.js","more-than-sushi_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -930,8 +930,13 @@
 </div>
 
 <div class="d-article">
-<!-- Storytime -->
-<p>It’s dark outside. Everyone is asleep, only lights in one window of the block is lit. Inside it, computer fans hum quietly, cooling the stressed CPUs. The clicking of keys on the keyboard Quietly humming computer fans, the clicking of the keyboard, a sip of coffee during an otherwise quiet night. While others sleep in their bed, or are drinking in a bar, I am building machine learning models to climb the kaggle leaderboard. Ah … good times. Just building one more feature, tuning one more model, testing this other approach before I go to bed. Hours drag on before I am ready to submit another prediction to the leaderboard. It’s 3 AM in the morning, when I hit the submit button. My sleepy eyes show me a blurry version of the loading screen. Disappointment sweeps through me, when kaggle shows me that the thing I just did actually performed a lot worse. Do I try this other idea I had? Exhaustion finally forces me to go to bed, where I dream of mathematical transformations of features and ever evolving data tables during a restless sleep.</p>
+<p>Welcome to bentoML.</p>
+<p>The bentoML blog is a space for machine learning beyond model fitting. Machine learning models rely on data, implicit assumptions and have a context, yet many people focus on the model fitting as in performance optimization and it is easy to ignore such things. The name bentoML is inspired by the japanese lunchbox called “bento box” Model fitting (or training/optimization) is just one “dish” in the box, but machine learning consists of much more: the data, the context, the people it affects and so on.</p>
+<aside>
+<div data-about="https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg">
+<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>“<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>” (<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>) by <a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a>
+</div>
+</aside>
 <!-- The Problem -->
 <h2 id="performance-optimization-the-sushi-of-machine-learning">Performance Optimization: The “Sushi” of Machine Learning</h2>
 <p>Fitting the best model is in some way a very satisfying task, because you get hard feedback through the score. And it’s easy, very easy to get fixated on that number and forget about what the data means, what the context of the appliciation is and to have insights into what the heck the model does. When I started to learn about machine learning, I was like that, only learning about software/algorithms/tuning methods and so on that would give me the best predictions.</p>
@@ -945,7 +950,7 @@
 </ul>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="../images/programming-ml.png" /><!-- --></p>
+<p><img src="images/iml.png" width="312" /></p>
 </div>
 </aside>
 <ul>
