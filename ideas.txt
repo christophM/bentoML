@@ -1,0 +1,16 @@
+<!-- Storytime -->
+
+It's dark outside.
+Everyone is asleep, only lights in one window of the block is lit.
+Inside it, computer fans hum quietly, cooling the stressed CPUs.
+The clicking of keys on the keyboard
+Quietly humming computer fans, the clicking of the keyboard, a sip of coffee during an otherwise quiet night.
+While others sleep in their bed, or are drinking in a bar, I am building machine learning models to climb the kaggle leaderboard.
+Ah ... good times.
+Just building one more feature, tuning one more model, testing this other approach before I go to bed.
+Hours drag on before I am ready to submit another prediction to the leaderboard.
+It's 3 AM in the morning, when I hit the submit button.
+My sleepy eyes show me a blurry version of the loading screen.
+Disappointment sweeps through me, when kaggle shows me that the thing I just did actually performed a lot worse.
+Do I try this other idea I had?
+Exhaustion finally forces me to go to bed, where I dream of mathematical transformations of features and ever evolving data tables during a restless sleep.

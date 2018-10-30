@@ -4,6 +4,7 @@ description: |
   Machine learning beyond performance optimization.
 base_url: bentoml.com
 output_dir: "docs"
+include: [css, js]
 navbar:
   title: "bentoML"
   logo: images/bento.png
@@ -12,7 +13,12 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
-output: radix::radix_article
+    - text: "Contact"
+      href: contact.html
+output:
+  radix::radix_article:
+    css: [css/form.css, css/radix.css, css/cookieconsent.min.css]
+    javascript: js/cookieconsent.min.js
 collections:
   posts:
     disqus: bentoml
