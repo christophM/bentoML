@@ -16,31 +16,127 @@ preview: images/bento.jpg
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Welcome to bentoML.
+<!-- Story-->
+A quiet night somewhere in Germany.
+While everyone else sleeps, I build machine learning models and compete with other obsessed machine learners from all over the world to build the best prediction model.
+Computer fans are hum to the beat of my fingers on the keyboard, only interrupted by drinking coffee.
+My currently best performing model is ranked somewhere in the middle of the public leaderboard.
+My machine learning model does a good job, but it's just not good enough to be among the best.
+I have this great idea of how to improve some of the features with some clever feature engineering, and I also want to try boosted trees instead of random forests.
+It shouldn't take more than 30 minutes.
+Then I will go to bed, I promise myself.
+Hours drag on before I am ready to submit another prediction and get another short to rise on the leaderboard
+It's 3:30 in the morning when I'm finally ready to submit my predictions based on new features and a new model.
+Full of hope, I hit the submit button.
+I am so tired that I see a very blurry version of the loading screen. 
+I know it tells me that my predictions are being evaluated.
+Will I rise on the leaderboard?
+Top 10% would be great.
+There is even prices to be won for the top 3.
+The actual results quickly crush my hopes and double my fatigue
+My recent changes have reduced the predictive performance of my model by a lot.
+I must have a bug in the code.
+Should I quickly try to find it, fix it and resubmit the prediction?
+My rational self finally takes control and manages to put me to bed.
+I sleep restless and dream of mathematical transformations of features and constantly evolving data.
+
+
+<!-- Personal view -->
+I had a few of those late "kaggle"-evenings, but it's over now.
+It's over now for two reasons.
+First, I value sleep so much more now. 
+More importantly for you as a reader of the bentoML blog, my understanding of what is good machine learning has changed dramatically.
+My previous view was:
+I have to learn all the models, how to tune them and some feature engineering.
+The most important about machine learning is that the model performs really, really well.
+My view now is:
+Machine learning has way more moving parts than model fitting.
+In some ways, model fitting is the easiest part.
+Much harder and very important parts of machine learning are problem translation, getting the data right, model interpretation and understanding of the models context (more on those things later).
+
+
+# It took me 5 years to go beyond model fitting 
+<!-- Hard for beginners -->
+It took me around 5 years to fully realize how small the role of fitting the best model is in machine learning and that there is so much more to get right.
+Why so long? 
+I kind of feel like an idiot for taking so long to realize that there is so much more to get machine learning right.
+Let's do a post mortem of why it is so easy to think that the hardest and most important part of machine learning is the model fitting.
+Let's look at how you begin to do machine learning.
+You can start with a basic understanding of math and some programing skills.
+You don't know about machine learning at this point.
+You start taking courses at kaggle or the university, or maybe you work yourself through a textbook.
+All those are focused on the training of the models, their mathematical foundations and how to program them.
+You encounter some examples, but they are neatly packaged for you and don't actually have any real world application and they certainly don't have any context for you other than being part of a course.
+You get some familarity with machine learning and start competing in kaggle competitions.
+Again, the prediction problem you have to solve is already nicely packaged, the data is there. 
+This only leaves feature engineering and, of course, finding the best model!
+You might even earn money with that.
+By only finding the best fitting model.
+This means that machine learning really is just finding the best model, if that already potentially pays so much real money, no?
+Your passion for machine learning is ignited.
+You want to rank higher in the next competition!
+The machine learning community is really great and open and you make use of the many blog posts about how to get better performing models and clone github repos of the latest machine learning libraries.
+Because machine learning is only about the models, no?
+Machine learning is such a young field, and so deeply interwoven with the research community.
+To really deepen your understanding, you start reading papers on ml.
+Which papers do get the most praise and echo in the community?
+The ones where the models beat some benchmark of course, like Imagenet or BLEUR scores!
+Have you not finally understood that it's all about the best model?
+EVERYONE WANTS THE BEST MODEL. 
+FITTING THE BEST MODEL IS THE MOST IMPORTANT THING YOU CAN DO TODAY!
+
+That's actually quite close to how I learned about machine learning and I guess many share a similar path.
+It's very clear to me, how easy it is for a beginner to become obsessed with the models and their performance instead of thinking about the broader context.
+We as a community are to obsessed with simple performance metrics and too much in love with our models.
+
+<aside>
+An anecdote from early in machine learning career:
+When I first started out with machine learning applications, I wasn't such a good coder compared to my surrounding team.
+But I asked good questions.
+For example if the training data would match the later application data.
+My mentor praised me for those questions, because not many other people asked them.
+I dismissed the praise, my imposter syndrom for not knowing how to program in Scala was stronger. 
+Also I thought that learning how to built stronger prediction models was more important.
+Only now can I fully appreciate my mentors praise.
+</aside>
+
+
+# What matters in machine learning
+
+<!-- What matters -->
+What does actually matter in machine learning?
+We have three huge areas that are IMHO completely underestimated:
+
+- Data-Generating Process. "Where is my data coming from?"
+- Model Interpretation. "What does my model really do?"
+- Application Context. "How will my model affect the real world?"
+
+And it's easy, very easy to get fixated on that number and forget about what the data means, what the context of the appliciation is and to have insights into what the heck the model does.
+As you might know, I am focusing on the second part, the model interpretation.
+You can have the best performing model, but fuck one of those three topics up and your model will mean nothing or actually do harm.
+Training data does not match application data? 
+Management rejects model because it's a black box?
+Model has severe racial bias?
+But if you get data, interpretaiton and context right, but only get a so-so model, you are still in a very good position, far ahead of any competition.
+
+<!-- Big players get it wrong -->
+<!-- Why we get it wrong: A Tale of Two Horses -->
 
 
 
+
+
+
+
+
+--------- TEXT MATERIAL ---------------------------------------------------------------------------------------------
 <aside>
 <div about='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg'><a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a></div>
 </aside>
 
-<!-- The Problem -->
-
-## Performance Optimization: The "Sushi" of Machine Learning
-
-Fitting the best model is in some way a very satisfying task, because you get hard feedback through the score.
-And it's easy, very easy to get fixated on that number and forget about what the data means, what the context of the appliciation is and to have insights into what the heck the model does.
-When I started to learn about machine learning, I was like that, only learning about software/algorithms/tuning methods and so on that would give me the best predictions.
 
 <!-- many are still like that -->
-A big part of the machine learning community is still focused very much on the optimization part. 
-Look at research papers in the deep learning space that try to beat the same benchmarks over and over.
-Look at machine learning online courses and blog posts. 
-Their focus is on mathematical foundation for the models, models, tuning, performance estimation.
-Look at kaggle. (TBH, they are getting better through kernels and such).
-Learning all that stuff takes time and is not super easy.
-Especially for beginners it's hard, because - depending on prior knowledge - it's a challenge to understand the math behind all those algorithms, to learn programing and other computer skills.
-Your first contacts with machine learning are very algorithm-focused MOOCs (or university classes), technical books, toy-examples with always the same datasets and later maybe research paper, which are also usually focused on algorithms.
+
 The first time you realize that the model fitting itself is the easist part of your work is when you work on a real-world machine learning task. 
 Suddenly you are confronted with questions that you never encountered before:
 
