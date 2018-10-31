@@ -1,7 +1,7 @@
 ---
 title: "bentoML: Machine Learning Beyond Optimization"
 description: |
-  More Than Sushi: ML is a Bento Box.
+  Playing the wrong game.
 author:
   - name: Christoph Molnar
 date: 09-24-2018
@@ -40,6 +40,11 @@ Should I quickly try to find it, fix it and resubmit the prediction?
 My rational self finally takes control and manages to put me to bed.
 I sleep restless and dream of mathematical transformations of features and constantly evolving data.
 
+<aside>
+
+<img src='images/only-one-more.png' alt='' title='Working late to submit better predictions.' border='0' style='width: 250px'/>
+
+</aside>
 
 <!-- Personal view -->
 I had a few of those late "kaggle"-evenings, but it's over now.
@@ -89,7 +94,6 @@ That's actually quite close to how I learned about machine learning and I guess 
 It's very clear to me, how easy it is for a beginner to become obsessed with the models and their performance instead of thinking about the broader context.
 We as a community are to obsessed with simple performance metrics and too much in love with our models.
 
-<aside>
 An anecdote from early in machine learning career:
 When I first started out with machine learning applications, I wasn't such a good coder compared to my surrounding team.
 But I asked good questions.
@@ -98,7 +102,6 @@ My mentor praised me for those questions, because not many other people asked th
 I dismissed the praise, my imposter syndrom for not knowing how to program in Scala was stronger. 
 Also I thought that learning how to built stronger prediction models was more important.
 Only now can I fully appreciate my mentors praise.
-</aside>
 
 
 # What matters in machine learning
@@ -107,127 +110,109 @@ Only now can I fully appreciate my mentors praise.
 What does actually matter in machine learning?
 We have three huge areas that are IMHO completely underestimated:
 
+- Problem Setting. "What problem do I solve with machine learning?"
 - Data-Generating Process. "Where is my data coming from?"
 - Model Interpretation. "What does my model really do?"
 - Application Context. "How will my model affect the real world?"
 
+There is much more to consider and the above points are very broad.
+I am glad you are here, because bentoML is a space that will give machine learning the right perspective.
+A perspective beyond model optimization.
 And it's easy, very easy to get fixated on that number and forget about what the data means, what the context of the appliciation is and to have insights into what the heck the model does.
 As you might know, I am focusing on the second part, the model interpretation.
 You can have the best performing model, but fuck one of those three topics up and your model will mean nothing or actually do harm.
 Training data does not match application data? 
 Management rejects model because it's a black box?
 Model has severe racial bias?
-But if you get data, interpretaiton and context right, but only get a so-so model, you are still in a very good position, far ahead of any competition.
+But if you get data, interpretaton and context right, but only get a so-so model, you are still in a very good position, far ahead of any competition.
 
 <!-- Big players get it wrong -->
+Certainly this is only a problem of the beginners, no?
+And academics who are doing research on models and ignore all the stuff around.
+You just have to be smart enough, then you will automatically get machine learning right.
+Well, unfortunately, no.
+The best place to kind of automatically learn is - of course - doing real world projects in machine learning.
+When you are just starting to learn machine learning, it can be hard to get your fingers on such a project.
+But it is becoming increasingly simple, because more and more companies are doing machine learning.
+But your journey doesn't end there.
+You have to want to become better in the machine learning topics that have nothing to do with model optimization.
+Experience alone is not enough. 
+Very machine learning companies centered companies like Google or Amazon should have it figured out since a long time, if thinking about the data generating process, thinking about the impact of your model, thinking about biases and so on would come on its own if you just do enough projects.
+Very recent evidence shows that this is not the case and even the big corporate players in machine learning, with all their smart personelle they are hiring for a huge amount of money, make very dumb mistakes.
+
+
+Case 1: [The Google Photos app tagged people as "Gorillas".](https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai)
+In the Google Photos app, people with darker skin had a good chance of being tagged as "Gorilla".
+That was very embarassing for Google.
+How can that happen?
+We can't look inside Google, but speculate:
+Possible first error: Bad dataset. 
+My guess is that the training dataset for the image classifier didn't include many people with darker skin tones, but many gorillas.
+That would mean that miss-classifying someone with darker skin as Gorilla wouldn't be a very costly mistake.
+Possible error 2: Lack of diversity in the team.
+As a developer, you usually test those things (at least I would), like test the app with own photos.
+My guess is that this mistake would have been quickly discovered if there had been a developer or tester with darker skin early on.
+Possible third error: Lack of analysing the model and thinking about possible biases.
+
+
+Another example:
+Case 2: [Google Flu Trends](https://en.wikipedia.org/wiki/Google_Flu_Trends)
+Between 2008 and 2015, Google offered a website called "Google Flu Trends", a linear model predicting number of flu-related doctor visits in the US based on flu-related searches on Google Search.
+They stopped Google Flu Trends, it worked fine in the beginning, but later over-estimated flu occurence.
+One of the problems it had was that the search terms could also be related to other illnesses similar to the flu.
+Also an increased attention on the flue in the news might have contributed to overestimation.
+Additionally Google Flu Trend relied on seasonly correlated, non-causal search terms like "high school basketball"
+Problems: Overfitting, non-causal features. And the context of the application is a very dynamic environment, because search behaviour can change any time.
+
+I took two examples from Google (sorry Google). 
+Google has lots of those stories, but there are also other candidates like amazon hiring models being biased against women or 
+
+
 <!-- Why we get it wrong: A Tale of Two Horses -->
 
+# We love simple numbers too much
 
 
-
-
-
-
-
---------- TEXT MATERIAL ---------------------------------------------------------------------------------------------
-<aside>
-<div about='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg'><a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a></div>
-</aside>
-
-
-<!-- many are still like that -->
-
-The first time you realize that the model fitting itself is the easist part of your work is when you work on a real-world machine learning task. 
-Suddenly you are confronted with questions that you never encountered before:
-
-- How can we formulate a problem as a prediction model so that a machine learning algorithm can solve it?
-- What data should I use? Will training data and the "live" application data be similar enough? Is there some bias?
-- What did my model learn? Do I trust it enough to deploy it in production?
-- How will my model affect its users?
-
-
-<aside>
-```{r}
-knitr::include_graphics("images/iml.png")
-```
-</aside>
-
-* And no, kaggle competitions do not count as fully-blown real-world machine learning task. 
-Much is happening in the background: 
-Choosing a problem. 
-Translate it into an ML problem. 
-Find the right data. 
-
-
-And these things are often problem-specific, but most importantly they are hard, very hard.
-So hard that even the creme de la creme of clever people at big corporations like Google, Amazon and Microsoft, made pretty dumb mistakes.
-TODO: 
-Link Google Gorilla fail
-Link Amazon Hiring fail
-Link Tay fail
-
-My kaggle time is a while back now, and my narrow view on what is part of machine learning has expanded a lot.
-
-To be fair to kaggle, they have expanded a lot into this direction with kernels and data set. 
-<!-- Why is it such a problem? -->
-
-
-
-<!-- The Solution -->
-
-
-## Machine Learning is a Bento Box
-
-This - kind of addictive - model training (loss minimization) is like Sashimi, a kind of Sushi. 
-Sashimi is a Japanese dish, which consists of raw fish and raw fish only.
-Pure, (literally) raw, simple and perfect.
-(If you don't like raw fish, insert some food you like a lot.)
-Machine learning is like Sushi, or rather Sashimi.
-It's very tasty.
+One of the most frustrating parts in work can be, when we don't know if we are doing the right thing. 
+Especially if you are in academia or when you don't have a boss, knowing that you are doing the most meaningful thing at the moment is impossible.
+But it becomes very convenient, once you attach a number to it, because suddenly you have a proxy for "success".
+This can be the number on your monthly paycheck, how often your papers are cited, how many followers you have, your ranking on the leaderboard of a machine learning competition and so on.
+And to a certain degree, it's a very good thing to trying to measure your success in any way. 
+But those metrics are always oversimplified and it's never possible to squeeze all relevant impact into one metric.
+You might be highly paid, but you hate your job. Are you successful?
+Your papers are getting cited very often, but you still have no real world impact. Are you successful?
+You have thousands of followers, but nobody engages with your content. Are you successful?
+You score high on the competition leaderboard, but as many other competitors, you are making use of a data leakage. Are you successful?
+It is difficult to know when you should "chase" the numbers and when you should question them.
+It can be daunting to absurdly increase your number of citations when you want to become a professor.
+But wouldn't you rather be known for some thing you really studied in depth and for the quality, rigor and novelty in your work?
+I'd argue that the citations will come with quality anyways, but if you first and only look at the metrics, you will never become a good researcher, because you got your priorities wrong.
+The picture I have in mind when I think about "chasing metrics" is a racing horse.
+A beautiful, strong horse that is trained to run really fast. 
+At the end, when it did a good job, it gets carrots (Not sure if horses particularly like carrots, but let's pretend carrots are their favorite thing).
+To fully concentrate on the target (the metric), they wear blinders, that reduce their field of vision so that they don't see what's happening left and right of them.
+We are the horses, and we wear the blinders when we blindly chase the metrics.
+But sometimes, if we were to look left or right, we would see a carrot field, completely without other horses. 
+And we realize we have been playing the wrong game all the time.
 
 <aside>
-<div about='https://farm6.static.flickr.com/5609/15346295977_67b3f7da58_m.jpg'><a href='https://www.flickr.com/photos/phonakins/15346295977/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm6.static.flickr.com/5609/15346295977_67b3f7da58_m.jpg' alt='salmon sashimi by phonakins, on Flickr' title='salmon sashimi by phonakins, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/phonakins/15346295977/' target='_blank'>salmon sashimi</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc-nd/2.0/' target='_blank'>CC BY-NC-ND 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/phonakins/' target='_blank'>phonakins</a></div>
+<div about='https://farm7.static.flickr.com/6030/6018246720_142ac4b21f.jpg'><a href='https://www.flickr.com/photos/kingstongal/6018246720/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm7.static.flickr.com/6030/6018246720_142ac4b21f.jpg' alt='bringing up the rear by NapaneeGal, on Flickr' title='bringing up the rear by NapaneeGal, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/kingstongal/6018246720/' target='_blank'>bringing up the rear</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/kingstongal/' target='_blank'>NapaneeGal</a></div>
 </aside>
 
-It’s easy to get the impression that machine learning consists of finding the best machine learning model. Especially if you take part in competitions. 
-You can’t have Sashimi all the time, but for a healthy diet you have to add a variety of foods. 
-The same is true for machine learning projects. Machine learning models optimization is just one part of it. 
-The model has a context, lots of context actually. 
-It comes from data, affects decisions, influences human behaviour, has unintended consequences, is embedded in a product or process.
+My big hypothesis is that we are playing the "Game of Machine Machine Learning" wrong since a long time. 
+And the community is still wearing it's blinders and confusing the benchmark chase with real life.
+With this blog, I hope to make a contribution towards removing those blinders and to fully embrace the complexity of machine learning, it's dependence on data, it's affect on peoples lifes, how is it is to make mistakes, how little of a role the predictive performance is in contrast.
+Come with me on this journey and be part of the community that embraces the complexity of machine learning.
+You can sign up here for updates from the blog.
+If you are interested in writing a quest post, contact me via the contact formular.
 
-
-In real life, machine learning  projects need a lot more ingredients to be successful:
-
-- Finding a meaningful optimization goal in the first place.
-- Good, unbiased, goal-relevant data
-- Model interpretation.
-- Ethical considerations.
-- The context of the application.
-- The people it affects.
-
-- Considering the data generating process (biases, anyone?)
-- Considering the context and possible second-order effects
-- Actually looking into the black box model
-
-Moving again to Japanese food (yummy!), machine learning should be better thought of as a bento box. 
-A bento box is a box with many compartments with a variety of foods. 
-The machine learning model is just one part of those ingredients.
-I want to use the bentoML blog as a platform to speak about those machine learning topics that go beyond model fitting.
-This means expect to learn about interpretability of machine learning models, how to think about your training data and to better put the model into it's context.
 
 <aside>
 <div about='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg'><a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a></div>
 </aside>
 
-
-
-As you might, know, I am writing a book about Interpretable Machine Learning, which is another part of the bento box. 
-
-One of the other most important parts is the data that comes into this 
-
-
-TODO: Setup Disqus
-TODO: favicon
-TODO: Netlify
-TODO: Thanks people on Flickr for the photos
+TODO: Setup Disqus.
+TODO: favicon.
+TODO: Thanks people on Flickr for the photos.
+TODO: Setup newsletter.
 

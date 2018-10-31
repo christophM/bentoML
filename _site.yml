@@ -7,7 +7,7 @@ output_dir: "docs"
 include: [css, js]
 navbar:
   title: "bentoML"
-  logo: images/bento.png
+  logo: images/logo.png
   right:
     - text: "Home"
       href: index.html
