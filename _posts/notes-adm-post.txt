@@ -1,0 +1,49 @@
+
+# ADM (Algorithmic Decision Making)
+
+## about the document
+- Idea: Create a post summarizing the document Technische und rechtliche Betrachtungen algorithmischer Entscheidungsverfahren
+- Gutachten
+- Create by  Fachgruppe Rechtsinformatik der Gesellschaft für Informatik e.V.
+- Document was created for "Sachverständigenrats für Verbraucherbelange beim Bundesministerium der Justiz und für Verbraucherschutz"
+- almost 200 pages long
+- studies the (future) control of ADM systems from a legal and technical perspective
+- focused on ADM affecting people (makes sense since Verbraucherbelange payed for the doc)
+
+
+## Notes on content
+- companies automate decisions, especially with machine learning, which can be unfair, or the models make mistakes, violate rights of others (p. 6)
+- two methods to increase transparancy of adm tools: testing and auditing p. 7 ff.
+- call to action: p.7
+  - need for laws and legislation, but unclear how the framework should look like
+  - need for standards for testing, auditing and certification of adm systems
+  - doing tests of adm systems. tests should be kind of legally certified.
+  - only when we have a good legal framework for tests, then the testing of adm systems should be legally required
+  - companies should have to inform when they use such systems? to whom?
+  - create a state owned institute for algorithmic, which controls the auditing. similar to Bundesamts für Sicherheit in der Informationstechnik (BSI)
+  - universities have to educate especially in computer science and law school
+  - needs research between computer science and law
+- New legal questions are created by the use of the data, the learner and the model
+- Dangers of ADMs p. 12: discrimination, mistakes
+- They interviewed some people involved with ADM systems p. 19
+- they explore some laws from other countries that partially cover ADM systems, e.g. fair lending from US.
+- they show linear and logistic regression
+- based on talking with practitioners they found logistic regression to be the most commonly method used for scoring. (data seems anecdotal, but matches my anecdots. e.g. schufa also uses logistic regression)
+- discussing undersampling and oversampling for fairness. (i am not sure if that makes sense)
+- excluding sensitive features might lead to the model relying on proxies.
+- they discuss different measures of fairness (e.g. parity) p. 39 ff
+
+CONTINUE: p. 42
+
+
+## Critique from my side
+- not talking enough about the role of the data generating process
+- citing LIME only
+- No statisticians involved in the creation of the document (let's see if they still get it right, though)
+
+
+
+## citation
+Gesellschaft für Informatik (2018). Technische und rechtliche Betrachtungen algorithmischer
+Entscheidungsverfahren. Studien und Gutachten im Auftrag des Sachverständigenrats für Verbraucherfragen.
+Berlin: Sachverständigenrat für Verbraucherfragen.
