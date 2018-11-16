@@ -32,16 +32,43 @@
 - discussing undersampling and oversampling for fairness. (i am not sure if that makes sense)
 - excluding sensitive features might lead to the model relying on proxies.
 - they discuss different measures of fairness (e.g. parity) p. 39 ff
-
-CONTINUE: p. 42
+- you can analyze an ADM on three levels: complete system, ml model (black box or white box), indvidual prediction
+- with complete system they mean data collcetion, pre-processing, feature transformation, model training, post-processing (note: there is actually much more to it: possible feedback loops, manual decision making in the pre-processing, )
+- two problems when focusing only on modeling and data is assumed to just be there: data might not be representative, imbalanced data.
+- Business understanding and Data understanding come before modelling and are very important.
+- We should explain why a decision was made and for which data (subset) the model will not work well. (correct decision yes/no, confidence of model, discrimniation/non-discrimination). Based on which data was the decision made?
+- (seems like they dont understand logistic regression well: Ist ihr absoluter Wert sehr klein, so hat das entsprechende Attribut nur wenig bis keinen Einfluss auf die Voraussage. Ist jedoch der
+Parameter weit von 0 entfernt (positiv wie negativ), so hat das Attribut entsprechend
+Einfluss. -> wrong, depends on scale of feature as well)
+- (wrong about decision trees or at least an unprooved statement: Außerdem sind
+sie bei Regressionsproblemen (Vorhersage von Zahlenwerten statt binären Entscheidungen)
+anderen Modelltypen unterlegen.)
+- they recommend explaining the model on an instance level. they don't say why.
+- comparison to software testing: unit test, integration test, system test,
+- unit test for ADM could be: generate data set with sensitive feature (e.g. gender) and see if decision changes (makes no sense to me, because if it is problematic to have gender in their, you would not have it in the model, so really nonsense.)
+- Orakel-Problem: When creating test cases for unit tests, one needs to know what would be the correct output. For that an oracle is needed. This usually has to be a human or can't be done by a human at all maybe.
+- meta-morphic testing: instead of testing with absolute values, you just say: for specific instance, when I change feature xj, then prediction has to change by some factor or so
+- (their example for meta-morphic testing is meaningless. how would you know by how much the prediction should change when changing the feature? if you would know such things, you wouldn't use machine learning )
+- Auditing models
+  - code audit: audit a copy of the code and outputs
+  - non-invasive audits
+  - scraping audits
+  - sock puppet audits
+  - crowdsource audits
+- a platform  has some algo, which affects user. auditing means making a code copy and auditing it
+-
+CONTINUE: p.66 (non-invasive audits)
 
 
 ## Critique from my side
 - not talking enough about the role of the data generating process
 - citing LIME only
 - No statisticians involved in the creation of the document (let's see if they still get it right, though)
-
-
+- they dont emphasize problems with the data enough. for example they never speak about that the data might be correct, but reflects a social issue (e.g. preferring to hire men) that should not be encoded by the model.
+- dont really talk about cunterfactual explanations, buy only touch on it.
+- cite lime instead of other stuff.
+- nice that they draw comparisons with unit testing and meta-morphic testing, but i dont think that you can use such things at all, at least not how  they present it. e.g. logistic regression: if you would create a test for how the prediction has to change when i change one feature, then that is exactly the same as saying what weight the feature has. you can test constraints, but once you write a test for something it is fixed (fixed weight for ezample or maybe a monotonicity constraint) and by definition is not longer learned by data and as such you are not "testing" the model. the ultimate test of the model is the generalization error. again, this shows that statistician should be involved.
+-
 
 ## citation
 Gesellschaft für Informatik (2018). Technische und rechtliche Betrachtungen algorithmischer

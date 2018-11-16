@@ -1,7 +1,7 @@
 ---
-title: "Machine Learning Model Addiction"
+title: "A Wrong Game of Optimization"
 description: |
-  bentoML: Machine Learning Beyond Optimization
+  Machine Learning Beyond Optimization
 author:
   - name: Christoph Molnar
 date: 09-24-2018
@@ -18,9 +18,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <!-- Story-->
 *A quiet night, somewhere in Germany.
-Most people were going to bed.
+Most people were ready to go to bed.
 Not me.
-I was training machine learning models.
+I had to train machine learning models.
 I was competing online with obsessed people from all over the world about whose machine learning model could make the best preditions.
 My computer fans were huming, dictated by the rythm of my fingers on the keyboard.
 My current model was ranked somewhere in the middle of the public leaderboard.
@@ -31,20 +31,21 @@ Outperforming everyone elses model was.
 And better feature engineering and a better learning algorithm should get me there.
 I had a promising idea for creating new features and using boosted trees instead of random forests.
 It shouldn't take more than 30 minutes.
-I promised myself to go to bed afterwards.
-Hours passed.
-It was 3:30 in the morning, when I was finally ready to submit another prediction, gettting another shot at the leaderboard.
+I promised myself to go to bed afterwards.*
+
+*Hours passed.
+It was 3:30 in the morning, when I was finally ready to submit another prediction, getting another shot at the leaderboard.
 Full of hope, I hit the submit button.
-I was so tired that I saw only a blurry version of the loading screen that told me that the prediction were being evaluated.
+I was so tired that I saw only a blurry version of the loading screen that told me that the predictions were being evaluated.
 Would I rise on the leaderboard?
 I dared to hope.
-Maybe even into the top 10%?
+Could I reach the top 10%?
 The actual results quickly crushed my hopes and doubled down on my fatigue.
 Not only had I not risen, but my latest model performed worse than before.
 A bug in the code?
 Overfitting?
 Did I upload the wrong prediction file?
-My rational self finally took control over my body and manages to put me to bed.
+My rational self finally took control over my body and managed to put me to bed.
 I sleeped restlessly and dreamed of ever evolving decision trees that I would never comprehend.*
 
 <aside>
@@ -52,83 +53,87 @@ I sleeped restlessly and dreamed of ever evolving decision trees that I would ne
 </aside>
 
 
-# Machine Learning is more than the Model
+# Blinders Removed
 <!-- Personal view -->
 I had a few of those late-night machine learning competition sessions, but it's over now, for two reasons.
 First, I value sleep so much more now. 
 Second, my understanding of what is good machine learning has changed dramatically.
 
 When I started out with machine learning, I thought the most important about machine learning is that the model performs really, really well.
-And to achieve that, my sole focus has to be on learning any learning algorithm, feature engineering trick and evaluation technique that would get that damn model error down.
+And to achieve that, my sole focus would have to be on learning more learning algorithm,s feature engineering tricks and evaluation techniques that would get that damn model error down.
+
 Today, I have a rather different view.
 I think that machine learning is a lot more than loss minimization.
 And in some ways, model fitting is even the easiest part, because there is a huge amount of literature, educational material and practical exercises for it.
 I believe machine learning as a field, is quite mature now in fitting models.
 But all around the model fitting part, we have to deal with very difficult questions, like:
 
-- How do we reformulate problems, so that they can be solved with a prediction model?
-- How do we make people in our organisation trust in the models?
-- Is the training data that is used in modeling really ok to use? Is it biased? Willl it look like the application dat?
-- How do I debug machine learning models?
-- How will the model interact with reality? Are there feedback loops? Does it affect peoples lives?
+- How do translate problems into prediction tasks?
+- How do we create trust into the prediction models?
+- Is the training data biased? Will it be similar to the application data?
+- How do I debug a machine learning models if something goes wrong?
+- How do (wrong) predictions affect users / the product?
+- Are there harmful feedback loops between predictions and future training data?
+- How will a static model perform in a dynamic environment?
 
-My hypothesis is that the machine learning is still focused too much on the game of model optimization.
-But the machine learning field is slowly waking up and realizing that there is much more to it.
+My hypothesis is that the machine learning community is, on average, still focused too much on the game of model optimization.
+But the community is waking up and realizing that there is much more to it.
 Topics like interpretability, fairness, social impact, the role of the data are gaining more attention and importance.
 
-# Why it took me years to go beyond loss minimization 
+# The Allure of the Model
+
+*An anecdote from my early machine learning career:
+When I first started out working on machine learning applications in a startup, I wasn't such a good coder compared to my team members.
+But I asked many questions, for example whether the training data would match the later application data.
+My mentor praised me for those questions, because not many other people asked them.
+I dismissed the praise, since my imposter syndrom for not knowing how to program in Scala was stronger. 
+Also I thought that learning how to built stronger prediction models was more important.
+Only now can I fully appreciate my mentors praise.*
+
 <!-- Hard for beginners -->
 It took me around 5 years to fully realize how small the role of fitting the best model is in machine learning.
 Why did it take so long? 
-Short answer: Machine learning education and research is focused on model fitting.  
-Let's look through the eyes of a newcomer, who wants to get into machine learning.
-Let's assume she is currently doing her Master Degree in engineering and has a solid understanding of the mathematical basics and programing skills in C and Python.
-She doesn't really know about machine learning yet, only some linear regression models.
+Short answer: Machine learning education and research focuses too much on the "best" model, and trivializes the role of data, the human component and the complex interplay of the prediction model with its environment.
+
+For the long answer, let's look through the eyes of a hypothetical newcomer to machine learning.
+Her name is Anna, she is currently doing her Master studies in electrical engineering and has a solid understanding of the mathematical basics and programing skills in C and Python.
 To kickstart her machine learning career, she starts with [Andrew Ng's machine learning course](https://www.coursera.org/learn/machine-learning), and reads the book [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/).
-Those two, like most other educational materials, focus almost exclusively on the mathematical foundations of different models, how to train them, how to code them.
-No words spent on thinking about the data, social impact, ethical considerations, understanding the model, debugging the model, thinking about effects of your model etc..
-She encounters some examples, but they are neatly packaged and don't actually have any real world application and they certainly don't have any context for you other than being part of a course.
-She gets some familarity with machine learning and start competing in [kaggle competitions](kaggle.com).
-Again, the prediction problems are already nicely packaged, the data is there. 
-This only leaves feature engineering and, of course, finding the best model!
-The money goes to the teams with the best models. 
-Not to the team with a similarly well performing, but interpertable model.
-Not to the team with a model that trains in seconds instead of the winning model that trains for days.
-Not to the team whose model might have a chance to be usable in production.
+Like most other educational materials, they are essentially listing one type of model after the other, with the focus on the underlying math.
+No words spent on how to think about data, social impact, ethical considerations, model interpretation, application contexts and so on.
+She encounters some applciation examples, but they are neatly packaged toy examples.
+
+At some point, she start competing in [kaggle competitions](kaggle.com).
+Again she finds nicely packaged prediction problems, batteries included: 
+Behind the scences kaggle has already done the hard job of finding a company with data and a problem, translating a problem into a prediction task, figuring out which data can be used, possibly doing some data cleanup and merging, deciding on a performance metric, ...
+For the actual machine learning competition, this leaves some feature engineering and, of course, finding the best model!
+And who gets the money in the end?
+Not to the team with a well performing, interpretable model.
+Not to the team with a model that trains in seconds instead of days.
+Not to the team with a model might that would actually have a chance to be used in production.
+To the teams with the best models. 
 Her believes that machine learning really is just finding the best model are getting cemented.
 I mean, clearly, these are the only models that are generating the money.
+
 Her passion for machine learning is ignited.
 She wants to rank higher in the next competition!
-The machine learning community is really great and open and she makes use of the many blog posts about how to get better performing models and clones github repos of the latest machine learning libraries.
-Because machine learning is only about the models, no?
-Machine learning is such a young field, and so deeply interwoven with the research community.
-To really deepen her understanding, she starts reading papers.
-Which papers do get the most praise and echo in the community?
-The ones that introduce a new method and ideally prove at some benchmark that it is better than other methods.
-She has finally understood.
+Fortunately, the machine learning community is really great and open.
+She makes use of the many blog posts about how to get better performing models and clones github repos of the latest machine learning libraries.
+She has finally understood: 
 Machine learning is about fitting the best model.
 
-<aside>
-<img src='images/precious-f.png' alt='' title='Working late to submit better predictions.' border='0' style='width: 250px'/>
-Data scientist fitting the one model to rule them all, ca. 2013, colorized.
-</aside>
+She realizes how young the field of machine learning is and how closely the research community and the industry are connected.
+To get an edge, she wants to read papers on machine learning.
+But where to start? 
+Well, papers with the most citations of course!
+Which papers would that be?
+Well, of course the one focused [on models and frameworks.](https://www.kdnuggets.com/2018/03/top-20-deep-learning-papers-2018.html). 
+^[Any application paper cites the methods and tools it uses, so naturally papers introducing widely used models or computation frameworks are cited often.]
+The dangerously simplistic message throughout her journey is that to become good at machine learning, is to master the models (and a bit feature engineering).
 
 
-That's actually quite close to how I learned about machine learning and I guess many share a similar path.
-It's very clear to me, how easy it is for a beginner to become obsessed with the models and their performance instead of thinking about the broader context.
-We as a community are to obsessed with simple performance metrics and too much in love with our models.
+TODO: CONTINUE ITERATION HERE
 
-An anecdote from early in machine learning career:
-When I first started out with machine learning applications, I wasn't such a good coder compared to my surrounding team.
-But I asked good questions.
-For example if the training data would match the later application data.
-My mentor praised me for those questions, because not many other people asked them.
-I dismissed the praise, my imposter syndrom for not knowing how to program in Scala was stronger. 
-Also I thought that learning how to built stronger prediction models was more important.
-Only now can I fully appreciate my mentors praise.
-
-
-# What matters in machine learning
+# What Matters in Machine Learning
 
 <!-- What matters -->
 What does actually matter in machine learning?
@@ -150,7 +155,12 @@ Management rejects model because it's a black box?
 Model has severe racial bias?
 But if you get data, interpretaton and context right, but only get a so-so model, you are still in a very good position, far ahead of any competition.
 
-
+<aside>
+<div style='width: 250px'>
+<img src='images/precious-f.png' alt='' title='Working late to submit better predictions.' border='0' style='width: 250px'/>
+Data scientist fitting the one model to rule them all, ca. 2013, colorized.
+</div>
+</aside>
 <!-- Some examples -->
 
 
@@ -198,7 +208,7 @@ Google has lots of those stories, but there are also other candidates like amazo
 
 <!-- Why we get it wrong: A Tale of Two Horses -->
 
-# We are addicted to benchmarks
+# Numbers Seem to Simplify Life
 
 
 One of the most frustrating parts in work can be, when we don't know if we are doing the right thing. 
