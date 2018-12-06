@@ -128,135 +128,158 @@ Well, papers with the most citations of course!
 Which papers would that be?
 Well, of course the one focused [on models and frameworks.](https://www.kdnuggets.com/2018/03/top-20-deep-learning-papers-2018.html). 
 ^[Any application paper cites the methods and tools it uses, so naturally papers introducing widely used models or computation frameworks are cited often.]
-The dangerously simplistic message throughout her journey is that to become good at machine learning, is to master the models (and a bit feature engineering).
+The dangerously simplistic message throughout her journey is that to become good at machine learning, you have to only master the modeling algorithms (and a bit feature engineering).
 
-
-TODO: CONTINUE ITERATION HERE
 
 # What Matters in Machine Learning
 
 <!-- What matters -->
-What does actually matter in machine learning?
-We have three huge areas that are IMHO completely underestimated:
+If winning a kaggle competition is not enough to become a machine learning expert, then what else is there to know?
+IMHO following topics are completely undervalued:
 
-- Problem Setting. "What problem do I solve with machine learning?"
-- Data-Generating Process. "Where is my data coming from?"
-- Model Interpretation. "What does my model really do?"
-- Application Context. "How will my model affect the real world?"
+- **Problem Formulation**: Translate a problem into a prediction or pattern recognition problem.
+- **Data-Generating Process**: Understand the data, its limitations and suitability for sovling the problem.
+- **Model Interpretation**: Analyze the model beyond cross-validated performance estimates.
+- **Application Context**: Reflect how the model will interact with the world.
+- **Model Deployment**: Integrate the model into a product or process.
 
-There is much more to consider and the above points are very broad.
-I am glad you are here, because bentoML is a space that will give machine learning the right perspective.
-A perspective beyond model optimization.
-And it's easy, very easy to get fixated on that number and forget about what the data means, what the context of the appliciation is and to have insights into what the heck the model does.
-As you might know, I am focusing on the second part, the model interpretation.
-You can have the best performing model, but fuck one of those three topics up and your model will mean nothing or actually do harm.
-Training data does not match application data? 
-Management rejects model because it's a black box?
-Model has severe racial bias?
-But if you get data, interpretaton and context right, but only get a so-so model, you are still in a very good position, far ahead of any competition.
+This list is non-exhaustive. 
+Leave a comment if you think something is missing.
 
+You can have the best performing model, but mess up one of the mentioned points and your model will be useless or even harmful.
+When the training data does not match application data, the model might be completely useless.
+When management rejects the model because it's a black box, you have to go back to the drawing board.
+When you find out that the model has a racial bias, you better not use it.
+
+If you get problem formulation, data, interpretaton, context and deployment right, the project will be a great success, even if the model performance is only so-so, compared to some super-tuned stacked ensemble method.
+<!-- When you **fail to translate a problem** correctly into a machine learning problem, then any modeling you do afterwards might be fun, but unusable. -->
+<!-- Let's say you want to get more people to upgrade to a premium access to your website and want to encourage them by sending them a small gift when they sign up.  -->
+<!-- The number of gifts is limited, so you build a machine learning model to predict which user is most likely to sign up for a premium account based. -->
+<!-- You deploy the model and notice that users successfully sign up, but are very likely to cancel their subscription at the earliest possible moment. -->
+<!-- The problem is that the model was trained for a high upgrade rate, but not for long-term premium.  -->
+<!-- A solution might be to formulate the problem to predict who will be a premium member for at least a year. -->
+
+Let me share a story where a machine learning model performed well, but achieved the opposite of what people wanted.
+A friend of mine worked for a telecom company that sells, among other things, mobile contracts (telephone, sms, data).
+He was in the company's data science team and he was involved in a project to predict which customers are most likely to quit their mobile contracts.
+The goal was to prevent those customers from leaving by offering them better deals.
+So the team went ahead and built a machine learning that worked quite well in detecting those customers.
+They scored each customer and sent lists of those customers to another team that was responsible for actually contacting the customers and offering them better contracts.
+What do you think happened next?  
+Well, the number of cancellation INCREASED instead of declined.  
+Why?   
+The theory was that the customers that were contacted were reminded of their mobile contracts they wanted to quit.
+The email they received acted as a trigger to finally cancel their contract and go to another provider.  
+What was the problem?  
+It starts with how the problem was translated into a prediction problem.
+The model predicted "How likely is customer X to leave?".
+But it should have been "How likely is customer X to leave when we send him an e-mail". 
+The issue can also be seen as a problem with the application context.
+There hasn't been enough reflection about the consequences when you send emails to people who are likely to quit their contract with you.
+This story is a case gets an A+ for model building, F for problem formulation and context.
 <aside>
 <div style='width: 250px'>
 <img src='images/precious-f.png' alt='' title='Working late to submit better predictions.' border='0' style='width: 250px'/>
 Data scientist fitting the one model to rule them all, ca. 2013, colorized.
 </div>
 </aside>
+
+<!-- Also a lack of interpretability of machine learning models is an obstacle in many institutions. -->
+<!-- I have heard from many analysts and data scientists that they couldn't use machine learning approaches because they couldn't explain their behavior. -->
+
+<!-- In one of my projects I had to build a classifer that classifies short documents. -->
+<!-- The classifier had to be implemented later by the backend team. -->
+<!-- They didn't use Python or R, the languages in which I develop models, but Go, which didn't have machine learning libraries (at that time). -->
+<!-- So for the model to be deployed I had to train a model that could be easily serialized, handed over to the backend team and implemented by them.  -->
+<!-- I chose a decision tree. -->
+<!-- It would have been much more difficult to do the same with a neural network. -->
+
+
+<!-- And I want to use this blog also to right about topics related to interpretability, but also go more into the direction of the data generating process. -->
+<!-- I want to provide a perspective beyond model optimization. -->
+
 <!-- Some examples -->
 
 
 <!-- Big players get it wrong -->
-Certainly this is only a problem of the beginners, no?
-And academics who are doing research on models and ignore all the stuff around.
-You just have to be smart enough, then you will automatically get machine learning right.
-Well, unfortunately, no.
-The best place to kind of automatically learn is - of course - doing real world projects in machine learning.
-When you are just starting to learn machine learning, it can be hard to get your fingers on such a project.
-But it is becoming increasingly simple, because more and more companies are doing machine learning.
+Certainly, only beginners make such mistakes with machine learning for real tasks?
+Well, no.
+The best start to learn machine learning beyond model fitting the hard way is by working on real world projects.
 But your journey doesn't end there.
-You have to want to become better in the machine learning topics that have nothing to do with model optimization.
+You have to WANT to become better in the machine learning topics that have nothing to do with model optimization.
 Experience alone is not enough. 
-Very machine learning companies centered companies like Google or Amazon should have it figured out since a long time, if thinking about the data generating process, thinking about the impact of your model, thinking about biases and so on would come on its own if you just do enough projects.
-Very recent evidence shows that this is not the case and even the big corporate players in machine learning, with all their smart personelle they are hiring for a huge amount of money, make very dumb mistakes.
+Companies with a strong focus on ML  like Google or Amazon should have mastered machine learning beyond optimization a long time ago.
+Well, they haven't.
+With all their PhDs, all their money, all their experience, all their data, all their technical expertise, they haven't figured it out yet.
+Instead, they make very dumb mistakes still.
+Because machine learning is hard.
 
+Some examples to support this thesis:
 
-Case 1: [The Google Photos app tagged people as "Gorillas".](https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai)
-In the Google Photos app, people with darker skin had a good chance of being tagged as "Gorilla".
-That was very embarassing for Google.
-How can that happen?
-We can't look inside Google, but speculate:
-Possible first error: Bad dataset. 
-My guess is that the training dataset for the image classifier didn't include many people with darker skin tones, but many gorillas.
-That would mean that miss-classifying someone with darker skin as Gorilla wouldn't be a very costly mistake.
-Possible error 2: Lack of diversity in the team.
-As a developer, you usually test those things (at least I would), like test the app with own photos.
-My guess is that this mistake would have been quickly discovered if there had been a developer or tester with darker skin early on.
-Possible third error: Lack of analysing the model and thinking about possible biases.
-
-
-Another example:
-Case 2: [Google Flu Trends](https://en.wikipedia.org/wiki/Google_Flu_Trends)
-Between 2008 and 2015, Google offered a website called "Google Flu Trends", a linear model predicting number of flu-related doctor visits in the US based on flu-related searches on Google Search.
-They stopped Google Flu Trends, it worked fine in the beginning, but later over-estimated flu occurence.
-One of the problems it had was that the search terms could also be related to other illnesses similar to the flu.
-Also an increased attention on the flue in the news might have contributed to overestimation.
-Additionally Google Flu Trend relied on seasonly correlated, non-causal search terms like "high school basketball"
-Problems: Overfitting, non-causal features. And the context of the application is a very dynamic environment, because search behaviour can change any time.
-
-I took two examples from Google (sorry Google). 
-Google has lots of those stories, but there are also other candidates like amazon hiring models being biased against women or 
+- [The Google Photos app tagged people as "Gorillas".](https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai).
+Their solution was to not predict the tag 'Gorillas' any longer. 
+That's like when you have mold on your wall and you paint it instead of fixing the underlying issue.
+- [Google Flu Trends over-estimated flu occurence](https://en.wikipedia.org/wiki/Google_Flu_Trends). 
+They pulled the product. 
+It worked by correlating search terms with flu occurence, which seems to have picked up non-causal terms like "high school basketball". 
+- [Amazon built a hiring tool with gender bias](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G). 
+It was trained with their own hiring data and the model simply picked up historical bias by Amazon.
+The tool was never used.
+The narrative around this is that now it's fine, because they don't use the tool, ignoring that the gender-bias is probably still there. 
+Again, painting a molded wall white.
 
 
 <!-- Why we get it wrong: A Tale of Two Horses -->
 
-# Numbers Seem to Simplify Life
+# Simplify Your Life with Numbers!
 
+Work is frustrating without feedback whether you do the right thing and how well you do it.
+Especially in academia or when you are without a boss, it' common to wonder whether you are doing the most meaningful thing at the moment is impossible.
+Having a boss who tells you what to do might feel easier, but let me tell you a secret: They too have no idea what they are doing.
+Work feels more rewarding when you can measure how well you did.
+A proxy of success.  
+"Today I read 5 papers."  
+"This week I finished a 10 pages report."  
+"This month my website had 10k visitors."  
+"This year I received a bonus of 20k."  
 
-One of the most frustrating parts in work can be, when we don't know if we are doing the right thing. 
-Especially if you are in academia or when you don't have a boss, knowing that you are doing the most meaningful thing at the moment is impossible.
-But it becomes very convenient, once you attach a number to it, because suddenly you have a proxy for "success".
-This can be the number on your monthly paycheck, how often your papers are cited, how many followers you have, your ranking on the leaderboard of a machine learning competition and so on.
-And to a certain degree, it's a very good thing to trying to measure your success in any way. 
-But those metrics are always oversimplified and it's never possible to squeeze all relevant impact into one metric.
-You might be highly paid, but you hate your job. Are you successful?
-Your papers are getting cited very often, but you still have no real world impact. Are you successful?
-You have thousands of followers, but nobody engages with your content. Are you successful?
-You score high on the competition leaderboard, but as many other competitors, you are making use of a data leakage. Are you successful?
-It is difficult to know when you should "chase" the numbers and when you should question them.
-It can be daunting to absurdly increase your number of citations when you want to become a professor.
-But wouldn't you rather be known for some thing you really studied in depth and for the quality, rigor and novelty in your work?
-I'd argue that the citations will come with quality anyways, but if you first and only look at the metrics, you will never become a good researcher, because you got your priorities wrong.
-The picture I have in mind when I think about "chasing metrics" is a racing horse.
+To some degree, measuring success is a great method to make work simpler and more efficient.
+But those number always oversimplify success.
+It's impossible to squeeze all criteria into a few numbers.
+
+You are highly paid, but hate your job. Are you successful?  
+Your papers are getting cited very often, but you still have no real world impact. Are you successful?  
+You have thousands of followers, but nobody engages with your content. Are you successful?  
+You score high on the competition leaderboard, but as many other competitors, you are making use of a data leakage. Are you successful?  
+
+It is difficult to know to "chase" a number and when not to.
+It is my believe that the trade-off between "chasing numbers" and doing non-measurable work (like doing research on a new product instead of selling more of the old) is heavily tipped towards chasing numbers in our society.
+Also in the machine learning community.
+
+The picture I have in mind when I think about someone "chasing numbers" is a racing horse.
 A beautiful, strong horse that is trained to run really fast. 
 At the end, when it did a good job, it gets carrots (Not sure if horses particularly like carrots, but let's pretend carrots are their favorite thing).
-To fully concentrate on the target (the metric), they wear blinders, that reduce their field of vision so that they don't see what's happening left and right of them.
+To fully concentrate on the target (the number), they wear blinders that reduce their field of vision so that they don't see what's happening left and right of them.
 We are the horses, and we wear the blinders when we blindly chase the metrics.
-But sometimes, if we were to look left or right, we would see a carrot field, completely without other horses. 
-And we realize we have been playing the wrong game all the time.
+But sometimes, if we were to look left or right, we would see an untouched carrot field.
+And we realize that we have been playing the wrong game all the time.
+
+
+As a community, we are playing a wrong game of machine learning since a long time. 
+We have to get rid of our blinders.
+With this blog, I hope to make a contribution towards removing those blinders and to shift the focus away from model performance towards data, interpretability, application context and social impact.
+
+Sign up for blog updates and be part of our community that embraces the complexity of machine learning.
 
 <aside>
 <div about='https://farm7.static.flickr.com/6030/6018246720_142ac4b21f.jpg'><a href='https://www.flickr.com/photos/kingstongal/6018246720/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm7.static.flickr.com/6030/6018246720_142ac4b21f.jpg' alt='bringing up the rear by NapaneeGal, on Flickr' title='bringing up the rear by NapaneeGal, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/kingstongal/6018246720/' target='_blank'>bringing up the rear</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/kingstongal/' target='_blank'>NapaneeGal</a></div>
 </aside>
 
-My big hypothesis is that we are playing the "Game of Machine Machine Learning" wrong since a long time. 
-The community is still wearing it's blinders and confusing the benchmark chase with real life.
-With this blog, I hope to make a contribution towards removing those blinders and to fully embrace the complexity of machine learning, it's dependence on data, it's affect on peoples lifes, how is it is to make mistakes, how little of a role the predictive performance is in contrast.
-Come with me on this journey and be part of the community that embraces the complexity of machine learning.
-You can sign up here for updates from the blog.
-If you are interested in writing a quest post, contact me via the contact formular.
 
 
-<aside>
-<div about='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg'><a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a></div>
-</aside>
-
-
-It's not as bad as I painted it.
-Kaggle has kernels.
-The topic of machine learning beyond model fitting is becoming more common. 
-See also [this post by Robert Chang](https://medium.com/@rchang/getting-better-at-machine-learning-16b4dd913a1f), which is in similar spirit as the one you are reading here.
-People are starting to think about fairness. 
-Checkout the in-progress book here.
-There is also the young field of interpretable machine learning with a great ebook "Interpretable Machine Learning" (shameless self-promotion alert).
+<!-- <aside> -->
+<!-- <div about='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg'><a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a></div> -->
+<!-- </aside> -->
 
 TODO: Setup Disqus.
 TODO: favicon.
