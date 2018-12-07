@@ -1,7 +1,7 @@
 ---
-title: "A Wrong Game of Optimization"
+title: "The Wrong Game"
 description: |
-  Machine Learning Beyond Optimization
+  Beyond Machine Learning Model Optimization
 author:
   - name: Christoph Molnar
 date: 09-24-2018
@@ -68,7 +68,7 @@ And in some ways, model fitting is even the easiest part, because there is a hug
 I believe machine learning as a field, is quite mature now in fitting models.
 But all around the model fitting part, we have to deal with very difficult questions, like:
 
-- How do translate problems into prediction tasks?
+- How do we translate problems into prediction tasks?
 - How do we create trust into the prediction models?
 - Is the training data biased? Will it be similar to the application data?
 - How do I debug a machine learning models if something goes wrong?
@@ -114,6 +114,13 @@ To the teams with the best models.
 Her believes that machine learning really is just finding the best model are getting cemented.
 I mean, clearly, these are the only models that are generating the money.
 
+<aside>
+<div style='width: 250px'>
+<img src='images/precious-f.png' alt='' title='Working late to submit better predictions.' border='0' style='width: 250px'/>
+Data scientist fitting the one model to rule them all, ca. 2013, colorized.
+</div>
+</aside>
+
 Her passion for machine learning is ignited.
 She wants to rank higher in the next competition!
 Fortunately, the machine learning community is really great and open.
@@ -135,7 +142,7 @@ The dangerously simplistic message throughout her journey is that to become good
 
 <!-- What matters -->
 If winning a kaggle competition is not enough to become a machine learning expert, then what else is there to know?
-IMHO following topics are completely undervalued:
+The following topics are completely undervalued and deserve way more attention from the machine learning community.
 
 - **Problem Formulation**: Translate a problem into a prediction or pattern recognition problem.
 - **Data-Generating Process**: Understand the data, its limitations and suitability for sovling the problem.
@@ -152,12 +159,8 @@ When management rejects the model because it's a black box, you have to go back 
 When you find out that the model has a racial bias, you better not use it.
 
 If you get problem formulation, data, interpretaton, context and deployment right, the project will be a great success, even if the model performance is only so-so, compared to some super-tuned stacked ensemble method.
-<!-- When you **fail to translate a problem** correctly into a machine learning problem, then any modeling you do afterwards might be fun, but unusable. -->
-<!-- Let's say you want to get more people to upgrade to a premium access to your website and want to encourage them by sending them a small gift when they sign up.  -->
-<!-- The number of gifts is limited, so you build a machine learning model to predict which user is most likely to sign up for a premium account based. -->
-<!-- You deploy the model and notice that users successfully sign up, but are very likely to cancel their subscription at the earliest possible moment. -->
-<!-- The problem is that the model was trained for a high upgrade rate, but not for long-term premium.  -->
-<!-- A solution might be to formulate the problem to predict who will be a premium member for at least a year. -->
+
+# No, No, No! Wrong Way!
 
 Let me share a story where a machine learning model performed well, but achieved the opposite of what people wanted.
 A friend of mine worked for a telecom company that sells, among other things, mobile contracts (telephone, sms, data).
@@ -166,7 +169,8 @@ The goal was to prevent those customers from leaving by offering them better dea
 So the team went ahead and built a machine learning that worked quite well in detecting those customers.
 They scored each customer and sent lists of those customers to another team that was responsible for actually contacting the customers and offering them better contracts.
 What do you think happened next?  
-Well, the number of cancellation INCREASED instead of declined.  
+Well, the number of cancellation INCREASED instead of declined. 
+
 Why?   
 The theory was that the customers that were contacted were reminded of their mobile contracts they wanted to quit.
 The email they received acted as a trigger to finally cancel their contract and go to another provider.  
@@ -177,29 +181,8 @@ But it should have been "How likely is customer X to leave when we send him an e
 The issue can also be seen as a problem with the application context.
 There hasn't been enough reflection about the consequences when you send emails to people who are likely to quit their contract with you.
 This story is a case gets an A+ for model building, F for problem formulation and context.
-<aside>
-<div style='width: 250px'>
-<img src='images/precious-f.png' alt='' title='Working late to submit better predictions.' border='0' style='width: 250px'/>
-Data scientist fitting the one model to rule them all, ca. 2013, colorized.
-</div>
-</aside>
 
-<!-- Also a lack of interpretability of machine learning models is an obstacle in many institutions. -->
-<!-- I have heard from many analysts and data scientists that they couldn't use machine learning approaches because they couldn't explain their behavior. -->
-
-<!-- In one of my projects I had to build a classifer that classifies short documents. -->
-<!-- The classifier had to be implemented later by the backend team. -->
-<!-- They didn't use Python or R, the languages in which I develop models, but Go, which didn't have machine learning libraries (at that time). -->
-<!-- So for the model to be deployed I had to train a model that could be easily serialized, handed over to the backend team and implemented by them.  -->
-<!-- I chose a decision tree. -->
-<!-- It would have been much more difficult to do the same with a neural network. -->
-
-
-<!-- And I want to use this blog also to right about topics related to interpretability, but also go more into the direction of the data generating process. -->
-<!-- I want to provide a perspective beyond model optimization. -->
-
-<!-- Some examples -->
-
+# You Are In Good Company
 
 <!-- Big players get it wrong -->
 Certainly, only beginners make such mistakes with machine learning for real tasks?
@@ -214,7 +197,7 @@ With all their PhDs, all their money, all their experience, all their data, all 
 Instead, they make very dumb mistakes still.
 Because machine learning is hard.
 
-Some examples to support this thesis:
+Examples of big companies failing at machine learning:
 
 - [The Google Photos app tagged people as "Gorillas".](https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai).
 Their solution was to not predict the tag 'Gorillas' any longer. 
@@ -238,6 +221,7 @@ Especially in academia or when you are without a boss, it' common to wonder whet
 Having a boss who tells you what to do might feel easier, but let me tell you a secret: They too have no idea what they are doing.
 Work feels more rewarding when you can measure how well you did.
 A proxy of success.  
+
 "Today I read 5 papers."  
 "This week I finished a 10 pages report."  
 "This month my website had 10k visitors."  
@@ -264,6 +248,8 @@ We are the horses, and we wear the blinders when we blindly chase the metrics.
 But sometimes, if we were to look left or right, we would see an untouched carrot field.
 And we realize that we have been playing the wrong game all the time.
 
+<div about='https://farm1.static.flickr.com/198/479610434_f2dc99ff85.jpg'><a href='https://www.flickr.com/photos/khanklatt/479610434/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm1.static.flickr.com/198/479610434_f2dc99ff85.jpg' alt='Horses and Grapes by khanklatt, on Flickr' title='Horses and Grapes by khanklatt, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/khanklatt/479610434/' target='_blank'>Horses and Grapes</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/khanklatt/' target='_blank'>khanklatt</a></div>
+
 
 As a community, we are playing a wrong game of machine learning since a long time. 
 We have to get rid of our blinders.
@@ -271,18 +257,46 @@ With this blog, I hope to make a contribution towards removing those blinders an
 
 Sign up for blog updates and be part of our community that embraces the complexity of machine learning.
 
-<aside>
-<div about='https://farm7.static.flickr.com/6030/6018246720_142ac4b21f.jpg'><a href='https://www.flickr.com/photos/kingstongal/6018246720/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm7.static.flickr.com/6030/6018246720_142ac4b21f.jpg' alt='bringing up the rear by NapaneeGal, on Flickr' title='bringing up the rear by NapaneeGal, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/kingstongal/6018246720/' target='_blank'>bringing up the rear</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/kingstongal/' target='_blank'>NapaneeGal</a></div>
-</aside>
 
 
+- TODO: Setup Disqus.
+- TODO: favicon.
+- TODO: Thanks people on Flickr for the photos.
+- TODO: Setup newsletter.
+
+
+
+
+
+
+
+
+
+
+<!-- When you **fail to translate a problem** correctly into a machine learning problem, then any modeling you do afterwards might be fun, but unusable. -->
+
+<!-- Let's say you want to get more people to upgrade to a premium access to your website and want to encourage them by sending them a small gift when they sign up.  -->
+<!-- The number of gifts is limited, so you build a machine learning model to predict which user is most likely to sign up for a premium account based. -->
+<!-- You deploy the model and notice that users successfully sign up, but are very likely to cancel their subscription at the earliest possible moment. -->
+<!-- The problem is that the model was trained for a high upgrade rate, but not for long-term premium.  -->
+<!-- A solution might be to formulate the problem to predict who will be a premium member for at least a year. -->
+
+<!-- Also a lack of interpretability of machine learning models is an obstacle in many institutions. -->
+<!-- I have heard from many analysts and data scientists that they couldn't use machine learning approaches because they couldn't explain their behavior. -->
+
+<!-- In one of my projects I had to build a classifer that classifies short documents. -->
+<!-- The classifier had to be implemented later by the backend team. -->
+<!-- They didn't use Python or R, the languages in which I develop models, but Go, which didn't have machine learning libraries (at that time). -->
+<!-- So for the model to be deployed I had to train a model that could be easily serialized, handed over to the backend team and implemented by them.  -->
+<!-- I chose a decision tree. -->
+<!-- It would have been much more difficult to do the same with a neural network. -->
+
+
+<!-- And I want to use this blog also to right about topics related to interpretability, but also go more into the direction of the data generating process. -->
+<!-- I want to provide a perspective beyond model optimization. -->
+
+<!-- Some examples -->
 
 <!-- <aside> -->
 <!-- <div about='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg'><a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a></div> -->
 <!-- </aside> -->
-
-TODO: Setup Disqus.
-TODO: favicon.
-TODO: Thanks people on Flickr for the photos.
-TODO: Setup newsletter.
-
