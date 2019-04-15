@@ -1,25 +1,26 @@
-name: "bentoML"
-title: "bentoML, the bento box of machine learning"
+name: "Blog"
+title: "bentoML"
 description: |
-  Machine learning beyond performance optimization.
+  A blog about machine learning beyond predictive performance..
 base_url: bentoml.com
 output_dir: "docs"
 include: [css, js]
 navbar:
   title: "bentoML"
-  logo: images/bento.png
+  logo: images/logo.png
   right:
-    - text: "Home"
+    - text: "Posts"
       href: index.html
     - text: "About"
       href: about.html
-    - text: "Contact"
-      href: contact.html
+    - text: "Impressum"
+      href: impressum.html
 output:
   radix::radix_article:
     css: [css/form.css, css/radix.css, css/cookieconsent.min.css]
     javascript: js/cookieconsent.min.js
 collections:
   posts:
-    disqus: bentoml
+    disqus: christophmolnar
     share: [twitter, linkedin]
+    subscribe: _subscribe.html

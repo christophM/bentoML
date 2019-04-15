@@ -2,19 +2,40 @@
 title: "About"
 ---
 
-# About bentoML
+# bentoML Blog
 
-The bentoML blog is a space to learn about machine learning beyond model optimization.
+bentoML is a blog about machine learning beyond model optimization.
 Machine learning models rely on data, implicit assumptions and have a context, yet many people focus on the model fitting as in performance optimization and it is easy to ignore such things.
-The name bentoML is inspired by the japanese lunchbox called "bento box"
+We will talk here about the difficult parts in machine leanrning.
+The name bentoML is inspired by the japanese "bento box", a lunch box with many different dishes.
 Model fitting (or training/optimization) is just one "dish" in the box, but machine learning consists of much more: the data, the context, the people it affects  and so on.
 
-# About Me
-My name is Christoph Molnar, I am a data scientist and PhD candidate in interpretable machine learning. 
+<aside>
+<div data-about="https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg">
+<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>“<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>” (<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>) by <a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a>
+</div>
+</aside>
+
+
+# Christoph Molnar
+I am a data scientist and PhD candidate in interpretable machine learning. 
 I am passionate about using statistics and machine learning on data to make humans and machines smarter.
 And I am especially interested in making the decisions from algorithms more understandable for humans. 
-<a href="https://www.dropbox.com/s/ixlm39ufuwoy7wc/cv-christoph-molnar.pdf?dl=1">CV (PDF)</a>
-<!-- # Authors -->
 
+<aside>
+<img src="images/profile.png" alt="" title="Christoph's profile picture." border="0" style="width: 150px"/>
+</aside>
+
+<!--
+I am the author of the book "Interpretable Machine Learning", which is freely available as [a website](https://christoph.github.io/interpretable-ml-book/) and as ebook and PDF on [Leanpub](https://leanpub.com/interpretable-machine-learning/).
+The book is completely open source, written with R and `bookdown` and available on my [Github](http://github.com/christophM/interpretable-ml-book).
+This means, when you find a typo or so, you can [create an issue](https://github.com/christophM/interpretable-ml-book/issues/new) or fix it yourself and make a pull request.
+If you are not familiar with git, you can also write an email.
+
+<aside>
+<img src="images/cover.jpg" alt="" title="Cover of the book on Interpretable Machine Learning." border="0" style="width: 150px"/>
+</aside>
+
+-->
 
 
