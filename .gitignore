@@ -4,3 +4,6 @@
 .Ruserdata
 site_libs
 docs
+*.js
+*.swp
+*.html

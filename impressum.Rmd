@@ -1,9 +1,9 @@
 ---
 title: "Impressum"
-author: "Christoph Molnar"
 ---
 
-Christoph Molnar
+Christoph Molnar 
+<br />
 Munich, Germany
 
 
@@ -13,3 +13,6 @@ var hostname = "gmail.com";
 var linktext = username + "@" + hostname ;
 document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
 </script>
+
+<br />
+<br />

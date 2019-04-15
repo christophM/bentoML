@@ -1,0 +1,8 @@
+post-hoc interpretability methods reflect the distribution of the data, while interpreting interpretable models does not
+
+
+lm, glm and gam weights don'r reveal the importance of the features
+tree structure doesn't show importance or feature effects really
+p-value doesn't tell me feature importance.
+
+when i look at the weights, i ignore whether a step by 1 unit is meaningful, it also ignores min and max limits of feature.
