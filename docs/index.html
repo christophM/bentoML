@@ -20,26 +20,26 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>bentoML, the bento box of machine learning</title>
+  <title>bentoML: bentoML Blog</title>
   
   
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="bentoML, the bento box of machine learning"/>
+  <meta property="og:title" content="bentoML: bentoML Blog"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="bentoML, the bento box of machine learning"/>
+  <meta property="og:site_name" content="bentoML"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="bentoML, the bento box of machine learning"/>
+  <meta property="twitter:title" content="bentoML: bentoML Blog"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["bentoML, the bento box of machine learning"]},{"type":"character","attributes":{},"value":["radix::radix_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["bentoML Blog"]},{"type":"character","attributes":{},"value":["radix::radix_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -252,12 +252,22 @@
     display: block;
   }
   
-  .nav-dropdown-content a {
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
     color: black;
     padding: 6px 24px;
     text-decoration: none;
     display: block;
     text-align: left;
+  }
+  
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
   }
   
   .nav-dropdown:hover .nav-dropbtn {
@@ -383,6 +393,10 @@
     width: 100%;
   }
   
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+  
   .pandoc-table th:not([align]) {
     text-align: left;
   }
@@ -397,6 +411,10 @@
   
   .l-screen-inset {
     padding-right: 16px;
+  }
+  
+  .l-screen .caption {
+    margin-left: 10px;
   }
   
   .shaded {
@@ -506,6 +524,10 @@
   /* Tweak code blocks (note that this CSS is repeated above in an injection
      into the d-code shadow dom) */
   
+  d-code {
+    overflow-x: auto !important;
+  }
+  
   pre.d-code code.d-code {
     padding-left: 10px;
     font-size: 12px;
@@ -536,6 +558,11 @@
   }
   
   @media(min-width: 768px) {
+  
+  d-code {
+    overflow-x: visible !important;
+  }
+  
   pre.d-code code.d-code  {
       padding-left: 18px;
       font-size: 14px;
@@ -918,9 +945,9 @@
       var fn = $('#' + id);
       var fn_p = $('#' + id + '>p');
       fn_p.find('.footnote-back').remove();
-      var text = fn_p.text();
+      var text = fn_p.html();
       var dtfn = $('<d-footnote></d-footnote>');
-      dtfn.text(text);
+      dtfn.html(text);
       $(this).replaceWith(dtfn);
     });
     // remove footnotes
@@ -946,7 +973,10 @@
       var clz = "";
       var language = pre.attr('class');
       if (language) {
-        if ($.inArray(language, ["r", "cpp", "c", "java"]) != -1)
+        // map unknown languages to "clike" (without this they just dissapear)
+        if ($.inArray(language, ["bash", "clike", "css", "go", "html",
+                                 "javascript", "js", "julia", "lua", "markdown",
+                                 "markup", "mathml", "python", "svg", "xml"]) == -1)
           language = "clike";
         language = ' language="' + language + '"';
         var dt_code = $('<d-code block' + language + clz + '></d-code>');
@@ -1161,9 +1191,19 @@
     // prevent underline for linked images
     $('a > img').parent().css({'border-bottom' : 'none'});
   
-    // mark figures created by knitr chunks as 100% width
+    // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
-      $(this).find('img, .html-widget').css('width', '100%');
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
     });
   
     // auto-append index.html to post-preview links in file: protocol
@@ -1175,7 +1215,7 @@
   
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
-      $('.radix-site-header a').each(function(i,val) {
+      $('.radix-site-header a[href]').each(function(i,val) {
         $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
       });
     }
@@ -1184,6 +1224,8 @@
     $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
     $('.kable-table').children('table').addClass('pandoc-table');
   
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
   
     // initialize posts list
     if (window.init_posts_list)
@@ -1195,6 +1237,7 @@
       $('#disqus_thread').toggleClass('hidden');
       if (!$('#disqus_thread').hasClass('hidden')) {
         var offset = $(this).offset();
+        $(window).resize();
         $('html, body').animate({
           scrollTop: offset.top - 35
         });
@@ -1301,7 +1344,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"bentoML, the bento box of machine learning","authors":[]}
+{"title":"bentoML Blog","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1310,14 +1353,14 @@
 <nav class="radix-site-nav radix-site-header">
 <div class="nav-left">
 <span class="logo">
-<img src="images/bento.png"/>
+<img src="images/logo.png"/>
 </span>
 <a href="index.html" class="title">bentoML</a>
 </div>
 <div class="nav-right">
-<a href="index.html">Home</a>
+<a href="index.html">Posts</a>
 <a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+<a href="impressum.html">Impressum</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -1358,7 +1401,7 @@
   padding-bottom: 12px;
 }
 .posts-list {
-  margin-top: 24px;
+  margin-top: 60px;
   margin-bottom: 24px;
 }
 
@@ -1376,8 +1419,7 @@
 
 .posts-list .posts-list-caption {
   grid-column: screen;
-  font-weight: 500;
-  font-size: 40px;
+  font-weight: 400;
 }
 
 .posts-list .post-preview h2 {
@@ -1493,9 +1535,6 @@
 @media(min-width: 768px) {
   .posts-list .post-preview h2 {
     font-size: 26px;
-  }
-  .posts-list {
-    margin-top: 60px;
   }
   .posts-list .post-preview .thumbnail {
     float: right;
@@ -1646,21 +1685,82 @@ function init_posts_list() {
 
 
 
-<div class="posts-container posts-apply-limit l-page">
+<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
-<a href="posts/2018-09-24-more-than-sushi/" class="post-preview">
+<h1 class="posts-list-caption">bentoML Blog</h1>
+<a href="posts/2019-04-19-one-model/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
-<div class="publishedDate">Sept. 24, 2018</div>
+<div class="publishedDate">April 15, 2019</div>
 </div>
 <div class="thumbnail">
-<img data-src="posts/2018-09-24-more-than-sushi/images/bento.jpg"/>
+<img data-src="posts/2019-04-19-one-model/images/precious-f-small.jpeg"/>
 </div>
 <div class="description">
-<h2>bentoML: Machine Learning Beyond Model Fitting</h2>
-<p>More Than Sushi: ML is a Bento Box.</p>
+<h2>One Model to Rule Them All</h2>
+<p>The machine learning community focuses too much on predictive performance. But machine learning models are always a small part of a complex system. This post discusses our obsession with finding the best model and emphasizes what we should do instead: Take a step back and see the bigger picture in which the machine learning model is embedded.</p>
 </div>
 </a>
+</div>
+<div class="posts-sidebar">
+<div class="sidebar-section subscribe">
+<h3>Subscribe</h3>
+
+
+<div id="subscribe-caption" style="line-height: 1.2; margin-bottom: 2px;">Enjoy this blog? Get notified of new posts by email:</div>
+
+<script src="https://app-ab02.marketo.com/js/forms2/js/forms2.min.js"></script>
+<form class="mtktoBlogEmailForm" id="mktoForm_2224"></form>
+<script>
+// establish metrics based on where the form is located
+var in_sidebar = $('#subscribe-caption').parents('.sidebar-section').length;
+if (in_sidebar) {
+  var form_width = 190;
+  var base_width = form_width - 23;
+  var email_width = base_width + 'px';
+  var label_width = (base_width - 20) + 'px';
+  var button_width = email_width;
+  var button_padding = '30px';
+  var button_margin = '';
+  var font_size = '12px';
+} else {
+  var form_width = 400;
+  var base_width = form_width - 23;
+  var email_width = base_width + 'px';
+  var label_width = (base_width - 20) + 'px';
+  var button_width = email_width;
+  var button_padding = '30px';
+  var button_margin = '12px';
+  var font_size = '15px';
+}
+$('#subscribe-caption')
+  .css('width', base_width)
+  .css('font-size', font_size);
+MktoForms2.loadForm("https://app-ab02.marketo.com", "709-NXN-706", 2224, function(form) {
+  // get jquery reference to form
+  form = $(form.getFormElem().get(0));
+  $(form).css('width', form_width + 'px');
+  $(form).find('.mktoOffset').remove();
+  $(form).find('.mktoGutter').remove();
+  $(form).find('.mktoEmailField').css('width', email_width);
+  $(form).find('.mktoLabel').children().attr('style', 'font-weight: 400');
+  $(form).find('.mktoLabel')
+      .css('width', label_width)
+      .css('font-size', font_size);
+  $(form).find('.mktoButtonRow')
+      .css('width', button_width)
+      .css('text-align', 'center');
+  $(form).find('.mktoButtonWrap').attr('style', '');
+  $(form).find('.mktoButton')
+      .css('margin-top', '10px')
+      .css('padding-left', button_padding)
+      .css('padding-right', button_padding)
+      .css('font-size', font_size)
+      .css('margin-top', button_margin);
+});
+</script>
+
+</div>
 </div>
 <div class="posts-more">
 <a href="#">More articles &raquo;</a>
@@ -1669,7 +1769,7 @@ function init_posts_list() {
 <!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>bentoML, the bento box of machine learning</h1>
+<h1>bentoML Blog</h1>
 
 </div>
 
@@ -1725,9 +1825,6 @@ window.cookieconsent.initialise({
 <div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
-<div class="radix-site-nav radix-site-footer">
-<p><a href="impressum.html">Impressum</a></p>
-</div>
 <!--/radix_placeholder_navigation_after_body-->
 
 </body>
