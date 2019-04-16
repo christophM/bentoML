@@ -2,7 +2,7 @@ name: "Blog"
 title: "bentoML"
 description: |
   A blog about machine learning beyond predictive performance.
-base_url: https:://bentoml.com
+base_url: https://bentoml.com
 output_dir: "docs"
 include: [css, js]
 navbar:
