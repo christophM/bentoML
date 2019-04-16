@@ -2,20 +2,20 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <title>bentoML</title>
-    <link>bentoml.com</link>
-    <atom:link href="bentoml.com/index.xml" rel="self" type="application/rss+xml"/>
-    <description>A blog about machine learning beyond predictive performance..
+    <link>https:://bentoml.com</link>
+    <atom:link href="https:://bentoml.com/index.xml" rel="self" type="application/rss+xml"/>
+    <description>A blog about machine learning beyond predictive performance.
 </description>
     <generator>Radix</generator>
     <lastBuildDate>Mon, 15 Apr 2019 00:00:00 +0000</lastBuildDate>
     <item>
       <title>One Model to Rule Them All</title>
       <dc:creator>Christoph Molnar</dc:creator>
-      <link>bentoml.com/posts/2019-04-19-one-model</link>
+      <link>https:://bentoml.com/posts/2019-04-19-one-model</link>
       <description>The machine learning community focuses too much on predictive performance. But machine learning models are always a small part of a complex system. This post discusses our obsession with finding the best model and emphasizes what we should do instead: Take a step back and see the bigger picture in which the machine learning model is embedded.</description>
-      <guid>bentoml.com/posts/2019-04-19-one-model</guid>
+      <guid>https:://bentoml.com/posts/2019-04-19-one-model</guid>
       <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
-      <media:content url="bentoml.com/posts/2019-04-19-one-model/images/precious-f-small.jpeg" medium="image" type="image/jpeg"/>
+      <media:content url="https:://bentoml.com/posts/2019-04-19-one-model/images/precious-f-small.jpeg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
