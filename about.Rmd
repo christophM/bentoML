@@ -5,10 +5,10 @@ title: "About"
 # bentoML Blog
 
 bentoML is a blog about machine learning beyond model optimization.
-Machine learning models rely on data, implicit assumptions and have a context, yet many people focus on the model fitting as in performance optimization and it is easy to ignore such things.
-We will talk here about the difficult parts in machine leanrning.
-The name bentoML is inspired by the japanese "bento box", a lunch box with many different dishes.
-Model fitting (or training/optimization) is just one "dish" in the box, but machine learning consists of much more: the data, the context, the people it affects  and so on.
+Machine learning models always have a context and rely on data and implicit assumptions, yet many people focus on model performance.
+The name bentoML is inspired by the Japanese "bento box", a lunch box with many different dishes.
+Predictive performance is just one of many dishes in the box.
+In this blog, we will discuss topics that go beyond performance: machine learning interpretability, data biases, application context, fairness and more.
 
 <aside>
 <div data-about="https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg">
