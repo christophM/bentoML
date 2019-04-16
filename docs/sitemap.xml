@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
-    <loc>https:://bentoml.com/about.html</loc>
+    <loc>https://bentoml.com/about.html</loc>
     <lastmod>2019-04-16T08:50:51+01:00</lastmod>
   </url>
   <url>
-    <loc>https:://bentoml.com/contact.html</loc>
+    <loc>https://bentoml.com/contact.html</loc>
     <lastmod>2018-10-30T09:47:35+00:00</lastmod>
   </url>
   <url>
-    <loc>https:://bentoml.com/impressum.html</loc>
+    <loc>https://bentoml.com/impressum.html</loc>
     <lastmod>2019-04-15T16:46:33+01:00</lastmod>
   </url>
   <url>
-    <loc>https:://bentoml.com/</loc>
+    <loc>https://bentoml.com/</loc>
     <lastmod>2019-04-15T16:46:33+01:00</lastmod>
   </url>
   <url>
-    <loc>https:://bentoml.com/posts/2019-04-19-one-model/</loc>
+    <loc>https://bentoml.com/posts/2019-04-19-one-model/</loc>
     <lastmod>2019-04-15T16:45:04+01:00</lastmod>
   </url>
 </urlset>
