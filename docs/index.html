@@ -1685,7 +1685,7 @@ function init_posts_list() {
 
 
 
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
+<div class="posts-container posts-apply-limit l-page">
 <div class="posts-list">
 <h1 class="posts-list-caption">bentoML Blog</h1>
 <a href="posts/2019-04-19-one-model/" class="post-preview">
@@ -1701,66 +1701,6 @@ function init_posts_list() {
 <p>The machine learning community focuses too much on predictive performance. But machine learning models are always a small part of a complex system. This post discusses our obsession with finding the best model and emphasizes what we should do instead: Take a step back and see the bigger picture in which the machine learning model is embedded.</p>
 </div>
 </a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section subscribe">
-<h3>Subscribe</h3>
-
-
-<div id="subscribe-caption" style="line-height: 1.2; margin-bottom: 2px;">Enjoy this blog? Get notified of new posts by email:</div>
-
-<script src="https://app-ab02.marketo.com/js/forms2/js/forms2.min.js"></script>
-<form class="mtktoBlogEmailForm" id="mktoForm_2224"></form>
-<script>
-// establish metrics based on where the form is located
-var in_sidebar = $('#subscribe-caption').parents('.sidebar-section').length;
-if (in_sidebar) {
-  var form_width = 190;
-  var base_width = form_width - 23;
-  var email_width = base_width + 'px';
-  var label_width = (base_width - 20) + 'px';
-  var button_width = email_width;
-  var button_padding = '30px';
-  var button_margin = '';
-  var font_size = '12px';
-} else {
-  var form_width = 400;
-  var base_width = form_width - 23;
-  var email_width = base_width + 'px';
-  var label_width = (base_width - 20) + 'px';
-  var button_width = email_width;
-  var button_padding = '30px';
-  var button_margin = '12px';
-  var font_size = '15px';
-}
-$('#subscribe-caption')
-  .css('width', base_width)
-  .css('font-size', font_size);
-MktoForms2.loadForm("https://app-ab02.marketo.com", "709-NXN-706", 2224, function(form) {
-  // get jquery reference to form
-  form = $(form.getFormElem().get(0));
-  $(form).css('width', form_width + 'px');
-  $(form).find('.mktoOffset').remove();
-  $(form).find('.mktoGutter').remove();
-  $(form).find('.mktoEmailField').css('width', email_width);
-  $(form).find('.mktoLabel').children().attr('style', 'font-weight: 400');
-  $(form).find('.mktoLabel')
-      .css('width', label_width)
-      .css('font-size', font_size);
-  $(form).find('.mktoButtonRow')
-      .css('width', button_width)
-      .css('text-align', 'center');
-  $(form).find('.mktoButtonWrap').attr('style', '');
-  $(form).find('.mktoButton')
-      .css('margin-top', '10px')
-      .css('padding-left', button_padding)
-      .css('padding-right', button_padding)
-      .css('font-size', font_size)
-      .css('margin-top', button_margin);
-});
-</script>
-
-</div>
 </div>
 <div class="posts-more">
 <a href="#">More articles &raquo;</a>
