@@ -47,7 +47,7 @@ A bug in the code?
 Overfitting?
 Did I upload the wrong prediction file?
 My rational self finally took control over my body and managed to put me to bed.
-I sleeped restlessly and dreamed of ever evolving decision trees that I would never comprehend.*
+I sleept restlessly and dreamt of ever evolving decision trees that I would never comprehend.*
 
 <aside>
 <div style='width: 250px'>
@@ -63,19 +63,21 @@ I had a few of those late-night machine learning competition sessions, but it's 
 First, I value sleep so much more now. 
 Second, my understanding of machine learning has changed dramatically.
 
-When I started out with machine learning, I thought the most important about machine learning is that the model performs really, really well.
+When I started out with machine learning, I thought the most important machine learning skill to master is to train the best model performing model.
 And to achieve that, my sole focus would have to be on learning more algorithms, feature engineering tricks and evaluation techniques that would get that damn model error down.
+I mean, [I literally wrote a poem about random forests](http://machine-master.blogspot.com/2014/02/) a few years ago.
 
 Today, I have a rather different view.
 I think that machine learning is a lot more than loss minimization.
 And in some ways, model fitting is even the easiest part, because there is a huge amount of literature, educational material, practical exercises and excellent software for it.
+And you always get instant feedback (e.g. performance on unseen test data), which is very satisfying.
 I believe machine learning as a field, is quite mature now in fitting models.
-But all around the model fitting part, we have to deal with very difficult questions, like:
+But beyond model fitting, we have to deal with very difficult questions, such as:
 
 - How do we translate problems into prediction tasks?
 - How do we create trust into the prediction models?
 - Is the training data biased? Will it be similar to the application data?
-- How do I debug a machine learning models if something goes wrong?
+- How do I debug a machine learning model if something goes wrong?
 - How do (wrong) predictions affect users / the product?
 - Are there harmful feedback loops between predictions and future training data?
 - How will a static model perform in a dynamic environment?
@@ -96,7 +98,7 @@ Topics like system thinking, interpretability, fairness, social impact, the role
 # The Allure of the Model
 
 *An anecdote from my early machine learning career:
-When I started to work on machine learning applications in a startup, I wasn't such a good coder compared to my team members.
+When I started to work on machine learning applications in a startup, I wasn't as good in coding (by far) as the other team members.
 But I asked many questions, for example whether the training data would match the later application data.
 My mentor praised me for those questions.
 I dismissed the praise, since my imposter syndrom for not knowing how to program in Scala was stronger. 
@@ -109,23 +111,23 @@ Why did it take so long?
 Short answer: Machine learning education and research focuses too much on the "best" model, and trivializes the role of data, the human component and the complex interplay of the prediction model with its environment.
 
 For the long answer, let's look through the eyes of a hypothetical newcomer to machine learning.
-Her name is Anna, she is currently doing her Master studies in electrical engineering and has a solid understanding of the mathematical basics and programing skills in C and Python.
-To kickstart her machine learning career, she starts with [Andrew Ng's machine learning course](https://www.coursera.org/learn/machine-learning), and reads the book [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/).
+Her name is Anna, she is currently doing her Master studies in electrical engineering and has a solid understanding of the mathematical basics and can program in C and Python.
+To kick-start her machine learning career, she starts with [Andrew Ng's machine learning course](https://www.coursera.org/learn/machine-learning), and reads the book [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/).
 Like most other educational materials, they are essentially listing one type of model after the other, with the focus on the underlying math.
-No words spent on how to think about data, social impact, ethical considerations, model interpretation, application contexts and so on.
+Almost no words spent on how to think about data, social impact, ethical considerations, model interpretation, application contexts and so on.
 She encounters some application examples, but they are neatly packaged toy examples.
 
-At some point, she start competing in [kaggle competitions](kaggle.com).
+At some point, she start competing in [Kaggle competitions](kaggle.com).
 Again she finds nicely packaged prediction problems, batteries included: 
-Behind the scences kaggle has already done the hard job of finding a company with data and a problem, translating a problem into a prediction task, figuring out which data can be used, possibly doing some data cleanup and merging, deciding on a performance metric, ...
+Behind the scenes Kaggle has already done the hard job of finding a company with data and a problem, translating a problem into a prediction task, figuring out which data can be used, possibly doing some data cleanup and merging, deciding on a performance metric, ...
 For the actual machine learning competition, this leaves some feature engineering and, of course, finding the best model!
 And who gets the money in the end?
 Not to the team with a well performing, interpretable model.
 Not to the team with a model that trains in seconds instead of days.
 Not to the team with a model might that would actually have a chance to be used in production.
-The money goes to the teams with the best models. 
+The money goes to the teams with the highest predictive performance. 
 Her believes that machine learning really is just finding the best model are getting cemented.
-I mean, clearly, these are visibly the winners that attract money.
+I mean, clearly, these are visibly the winners that get money and honor.
 
 <aside>
 <div style='width: 250px'>
@@ -137,7 +139,7 @@ Data scientist fitting the one model to rule them all, ca. 2013, colorized.
 Her passion for machine learning is ignited.
 She wants to rank higher in the next competition!
 Fortunately, the machine learning community is really great and open.
-She makes use of the many blog posts about how to get better performing models and clones github repos of the latest machine learning libraries.
+She makes use of the many blog posts about how to get better performing models and clones Github repos of the latest machine learning libraries.
 She has finally understood: 
 Machine learning is about fitting the best model.
 
@@ -147,18 +149,18 @@ But where to start?
 Well, papers with the most citations of course!
 Which papers would that be?
 Well, of course the one focused [on models and frameworks.](https://www.kdnuggets.com/2018/03/top-20-deep-learning-papers-2018.html). 
-^[Any application paper cites the methods and tools it uses, so naturally papers introducing widely used models or computation frameworks are cited often.]
-The dangerously simplistic message throughout her journey is that to become good at machine learning, you have to only master the modeling algorithms (and a bit feature engineering).
+^[Many application papers cite the methods and tools they used, so naturally papers introducing widely used models or computation frameworks are cited often.]
+The dangerously simplistic message throughout her journey is that to become good at machine learning, you have to focus on the modeling algorithms (and a bit feature engineering).
 
 
 # What Matters in Machine Learning
 
 <!-- What matters -->
-If winning a kaggle competition is not enough to become a machine learning expert, then what else is there to know?
+If winning a Kaggle competition is not enough to become a machine learning expert, then what else is there to know?
 IMHO the following topics are completely undervalued and deserve way more attention from the machine learning community.
 
 - **Problem Formulation**: Translate a problem into a prediction or pattern recognition problem.
-- **Data-Generating Process**: Understand the data, its limitations and suitability for sovling the problem.
+- **Data-Generating Process**: Understand the data, its limitations and suitability for solving the problem.
 - **Model Interpretation**: Analyze the model beyond cross-validated performance estimates.
 - **Application Context**: Reflect how the model will interact with the world.
 - **Model Deployment**: Integrate the model into a product or process.
@@ -171,7 +173,7 @@ When the training data does not match application data, the model might be compl
 When management rejects the model because it's a black box, you have to go back to the drawing board.
 When you find out that the model has a racial bias, you better not use it.
 
-If you get problem formulation, data, interpretaton, context and deployment right, the project will be a great success, even if the model performance is only so-so, compared to some super-tuned stacked ensemble method that goes to the trash bin.
+If you get problem formulation, data, interpretation, context and deployment right, the project will be a great success, even if the model performance is only so-so, compared to some super-tuned stacked ensemble method that goes to the trash bin.
 
 # Easy to Get it Wrong
 
@@ -189,10 +191,10 @@ The email they received acted as a trigger to finally cancel their contract and 
 What was the problem?  
 It starts with how the problem was translated into a prediction problem.
 The model predicted "How likely is customer X to leave?".
-But it should have been "How likely is customer X to leave when we send him an e-mail". 
+But it should have been "How likely is customer X to leave when we send an e-mail". 
 The issue can also be seen as a problem with the application context.
 There hasn't been enough reflection about the consequences when you send emails to people who are likely to quit their contract with you.
-This story is a case gets an A+ for model building, F for problem formulation and context.
+A+ for model building, F for problem formulation and context.
 
 
 # You Are In Good Company
@@ -200,7 +202,7 @@ This story is a case gets an A+ for model building, F for problem formulation an
 <!-- Big players get it wrong -->
 Certainly, only beginners make such mistakes with machine learning for real tasks?
 Well, no.
-The best start to learn machine learning beyond model fitting the hard way is by working on real world projects.
+The best way to start learning machine learning beyond model fitting is by working on real world projects.
 But your journey doesn't end there.
 You have to WANT to become better in the machine learning topics that have nothing to do with model optimization.
 Experience alone is not enough. 
@@ -208,20 +210,20 @@ Companies with a strong focus on ML like Google or Amazon should have mastered m
 Well, they haven't.
 With all their PhDs, all their money, all their experience, all their data, all their technical expertise, they haven't figured it out yet.
 Instead, they make very dumb mistakes still.
-Because machine learning is hard.
+Because it's difficult to apply machine learning in the real world.
 
 Examples of big companies failing at machine learning:
 
 - [The Google Photos app tagged people as "Gorillas".](https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai).
 Their solution was to not predict the tag 'Gorillas' any longer. 
 That's like when you have mold on your wall and you paint it instead of fixing the underlying issue.
-- [Google Flu Trends over-estimated flu occurence](https://en.wikipedia.org/wiki/Google_Flu_Trends). 
+- [Google Flu Trends over-estimated flu occurrence](https://en.wikipedia.org/wiki/Google_Flu_Trends). 
 They pulled the product. 
-It worked by correlating search terms with flu occurence, which seems to have picked up non-causal terms like "high school basketball". 
+It worked by correlating search terms with flu occurrence, which seems to have picked up non-causal terms like "high school basketball". 
 - [Amazon built a hiring tool with gender bias](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G). 
-It was trained with their own hiring data and the model simply picked up historical bias by Amazon.
+It was trained with their own hiring data and the model simply picked up Amazons hiring bias (i.e. favoring men).
 The tool was never used.
-The narrative around this is that now it's fine, because they don't use the tool, ignoring that the gender-bias is probably still there. 
+The narrative is that now it's fine, because they don't use the tool, ignoring that the underlying gender bias remains.
 Again, painting a molded wall white.
 
 
@@ -231,12 +233,15 @@ Again, painting a molded wall white.
 
 Work is frustrating without feedback telling you whether you do the right thing and how well you do it.
 Especially in academia or when you are without a boss, it's common to wonder whether you are doing the most meaningful thing at the moment.
-Having a boss who tells you what to do might feel easier, but let me tell you a secret: They too usually have no idea what they are doing.
+Having a boss who tells you what to do might feel easier, but let me tell you a secret:
+No one has figured it all out.
+No matter how old you get, there is no sudden realization in your head how the world works.
+People just do things.
 Work feels more rewarding when you can measure how well you did.
 A proxy of success.  
 
 "Today I read 5 papers."  
-"This week I finished a 10 pages report."  
+"This week I finished a 10-pages report."  
 "This month my website had 10k visitors."  
 "This year I received a bonus of 20k."  
 
@@ -247,7 +252,7 @@ It's impossible to squeeze all criteria into a few numbers.
 You are highly paid, but hate your job. Are you successful?  
 Your papers are getting cited very often, but you still have no real world impact. Are you successful?  
 You have thousands of followers, but nobody engages with your content. Are you successful?  
-You score high on the competition leaderboard, but as many other competitors, you are making use of a data leakage. Are you successful?  
+You score high in a machine learning competition, but like many other competitors, you are making use of a data leakage. Are you successful?  
 
 It is difficult to know when to "chase" a number and when not to.
 It is my believe that the trade-off between "chasing numbers" and doing non-measurable work (like doing research on a new product instead of selling more of the old) is heavily tipped towards chasing numbers in our society.
@@ -255,8 +260,9 @@ Also in the machine learning community.
 
 The picture I have in mind when I think about someone "chasing numbers" is a racing horse.
 A beautiful, strong horse that is trained to run really fast. 
-At the end, when it did a good job, it gets carrots (Not sure if horses particularly like carrots, but let's pretend carrots are their favorite thing).
-To fully concentrate on the target (the number), they wear blinders that reduce their field of vision so that they don't see what's happening left and right of them.
+At the end, when it did a good job, it gets carrots.
+(Not sure if horses particularly like carrots, but let's pretend carrots are their favorite thing.)
+To fully concentrate on the target (the number), they wear blinders that reduce their field of vision so that they don't see what's happening left and right.
 We are the horses, and we wear the blinders when we blindly chase the metrics.
 But sometimes, if we were to look left or right, we would see an untouched carrot field.
 
@@ -265,34 +271,5 @@ But sometimes, if we were to look left or right, we would see an untouched carro
 
 As a community, we are playing a wrong game of machine learning since a long time. 
 We have to get rid of our blinders.
-With this blog, I hope to make a contribution towards removing those blinders and to shift the focus away from model performance towards data, interpretability, application context and social impact.
+With this blog, I hope to make a contribution towards removing those blinders and to help shift the focus away from model performance towards data, interpretability, application context and social impact.
 
-Sign up for blog updates and be part of our community that embraces the complexity of machine learning.
-
-<!-- When you **fail to translate a problem** correctly into a machine learning problem, then any modeling you do afterwards might be fun, but unusable. -->
-
-<!-- Let's say you want to get more people to upgrade to a premium access to your website and want to encourage them by sending them a small gift when they sign up.  -->
-<!-- The number of gifts is limited, so you build a machine learning model to predict which user is most likely to sign up for a premium account based. -->
-<!-- You deploy the model and notice that users successfully sign up, but are very likely to cancel their subscription at the earliest possible moment. -->
-<!-- The problem is that the model was trained for a high upgrade rate, but not for long-term premium.  -->
-<!-- A solution might be to formulate the problem to predict who will be a premium member for at least a year. -->
-
-<!-- Also a lack of interpretability of machine learning models is an obstacle in many institutions. -->
-<!-- I have heard from many analysts and data scientists that they couldn't use machine learning approaches because they couldn't explain their behavior. -->
-
-<!-- In one of my projects I had to build a classifer that classifies short documents. -->
-<!-- The classifier had to be implemented later by the backend team. -->
-<!-- They didn't use Python or R, the languages in which I develop models, but Go, which didn't have machine learning libraries (at that time). -->
-<!-- So for the model to be deployed I had to train a model that could be easily serialized, handed over to the backend team and implemented by them.  -->
-<!-- I chose a decision tree. -->
-<!-- It would have been much more difficult to do the same with a neural network. -->
-
-
-<!-- And I want to use this blog also to right about topics related to interpretability, but also go more into the direction of the data generating process. -->
-<!-- I want to provide a perspective beyond model optimization. -->
-
-<!-- Some examples -->
-
-<!-- <aside> -->
-<!-- <div about='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg'><a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm9.static.flickr.com/8063/8202112368_a7bf99a91c_m.jpg' alt='Bento box by toyohara, on Flickr' title='Bento box by toyohara, on Flickr' border='0'/></a><br/>&quot;<a href='https://www.flickr.com/photos/toyohara/8202112368/' target='_blank'>Bento box</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>)&nbsp;by&nbsp;<a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/toyohara/' target='_blank'>toyohara</a></div> -->
-<!-- </aside> -->
