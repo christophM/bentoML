@@ -21,6 +21,5 @@ output:
     javascript: js/cookieconsent.min.js
 collections:
   posts:
-    disqus: christophmolnar
+    disqus: bentoml
     share: [twitter, linkedin]
-    subscribe: _subscribe.html
