@@ -126,7 +126,7 @@ Not to the team with a well performing, interpretable model.
 Not to the team with a model that trains in seconds instead of days.
 Not to the team with a model might that would actually have a chance to be used in production.
 The money goes to the teams with the highest predictive performance. 
-Her believes that machine learning really is just finding the best model are getting cemented.
+Her beliefs that machine learning really is just finding the best model are getting cemented.
 I mean, clearly, these are visibly the winners that get money and honor.
 
 <aside>
@@ -255,7 +255,7 @@ You have thousands of followers, but nobody engages with your content. Are you s
 You score high in a machine learning competition, but like many other competitors, you are making use of a data leakage. Are you successful?  
 
 It is difficult to know when to "chase" a number and when not to.
-It is my believe that the trade-off between "chasing numbers" and doing non-measurable work (like doing research on a new product instead of selling more of the old) is heavily tipped towards chasing numbers in our society.
+It is my belief that the trade-off between "chasing numbers" and doing non-measurable work (like doing research on a new product instead of selling more of the old) is heavily tipped towards chasing numbers in our society.
 Also in the machine learning community.
 
 The picture I have in mind when I think about someone "chasing numbers" is a racing horse.
