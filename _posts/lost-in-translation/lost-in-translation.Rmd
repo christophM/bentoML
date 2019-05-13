@@ -1,7 +1,7 @@
 ---
 title: "Lost In Translation"
 description: |
-  We often think that loss is the only number that tells us how well a machine learning model fares. It's easy to forget that we already had a loss in translating some problem into a machine learning task.
+  The loss between prediction and true outcome is not the only loss that occurs. Any machine learning model starts with a goal an institution or individual wants to solve, translated into a tool or process that helps with that goal, which again is translated into a prediction task, which is translated to data. This blog post proposes a mental tool to think on a high level about translating problems into prediction tasks.
 author:
   - name: Christoph Molnar
 date: 04-15-2019
@@ -9,7 +9,7 @@ slug: loss
 output:
   radix::radix_article:
     self_contained: false
-preview: images/precious-f-small.jpeg
+preview: images/predictive-policing.png
 creative_commons: CC BY-NC
 ---
 
@@ -33,11 +33,90 @@ Another goal could be to get more content creators onto the platform.
 First translations: From goal to a process or tool to achieve the goal.
 When you settled on a goal, you have to decide to achieve it. 
 
+In the remainder of the post we will go through a few examples how this translation steps look like with three examples: customer relationship management, predictive policing and credit scoring.
+
+Loss will always occur.
+It's easy for me here to do the critique.
+When you formulate problems as prediction tasks, you always have to make compromises, settle with the not so perfect solution.
+Which is easy to critique.
+The most important is that you have thought about the translations that have been made and how it affects the applicability of the predictions to the real world.
+My advice: Make it explicit.
+This blog post will help you with a few examples how to make those steps more explicit. 
+Gives you a very rough template to do it (Goal -> Tool -> Prediction Task -> Data).
+
 # Sending Vouchers to Customers
-<img src='images/vouchers.jpg' alt='' title='Working late to submit better predictions.'/>
+
+Imagine you manage a travel agency.
+You sell trips to your customers, mostly to some very loyal customers and sometimes to new customers.
+At the last trade show, the stand showing how you can sell more trips using data analytics and marketing had a great impression on you and you decide to hire them.
+
+<img src='images/vouchers.jpg' alt='' title='Sending vouchers to customers to increase sales.'/>
+
+
+**The Goal:** Selling more trips
+
+The marketing consulting company advices you to send out vouchers to more customers.
+With that translation of your goal to this specfic tool, the first loss in translation has occured:
+Sending vouchers might not be the best tool.
+Maybe uninvited vouchers will annoy your customers, maybe the low hanging fruits are a niche group of customers for whom you have the perfect trips, but they just don't know you yet.
+
+But anyways, the decision has been made:
+
+**The Tool:** Send vouchers to customers.
+
+
+But wait!
+Sending vouchers to everyone in your database would be too expensive.
+Many customers are only file corpses in your drawers anyway.
+The mailings cost more than zero (cause you decided that your customers will prefer good ol' physical paper mailings).
+So, you need a way to send to "promising" / "high-value" customers.
+We can translate this into a prediction task.
+Why not predict which customer is most likely to book a trip in the next months.
+
+**The prediction task:** Predict whether a customer will book a trip in the next 2 months.
+
+The thinking is: If someone has a high likelihood do book, we want to make sure he books with us, and also the voucher might convince those that are not 100 percent sure whether to do a trip at all.
+
+Another loss has occured by translating from the tool to the prediction task.
+Maybe the customers who are likely to book will not be affected by the voucher, because they would have booked anyways.
+You only loose money because they now book cheaper.
+
+Now you have decided what to predict, the question is now which data to use.
+You settle on past trips booked, demographic information, money spent on trips at your agency, time and date, ...
+Ideally, you would have access to their bank account to see if they have enough money left, to their calenders to see if they have time, to their minds so you can read their thoughts.
+But you only have your agencies database, so you use that.
+Another translation has occured: From the prediction task to the data:
+
+**The Data:** Customer demographics and prior trips.
+
+A loss has ocurred as well.
+This time you can measure it more directly, since you can measure how well the data predicts whether someone will book a trip in the next two weeks.
+What's not easily measurable: The loss that ocurred by selecting a subset of the data, or by not using additional data.
+
 
 # Predictive Policing
+
+You are the head of the police department.
+The executive arm of civil protection lies within your responsible hands.
+
 <img src='images/predictive-policing.jpg' alt='' title='Working late to submit better predictions.'/>
+
+**The Goal:** Keep the city safe.
+
+Now, how exactly do you keep the city safe?
+For example by catching criminals.
+Even better, prevent crimes before they happen.
+Also called "stop-and-frisk" in its extreme form.
+So you translate the goal into:
+
+**The Tool:** Prevent crimes by showing presence, doing stop-and-frisk.
+
+A first loss has occurred:
+Is this the most effective method?
+Maybe the city could be made more secure by educating the people, by increasing the police staff to relief the burden of the many cases that are already on the table. 
+
+Anyways, stop-and-frisk it is.
+But your police staff can't be everywhere, you have to send them to specific areas.
 
 # Credit Scoring
 <img src='images/schufa.jpg' alt='' title='Working late to submit better predictions.'/>
