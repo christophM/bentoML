@@ -44,6 +44,15 @@ My advice: Make it explicit.
 This blog post will help you with a few examples how to make those steps more explicit. 
 Gives you a very rough template to do it (Goal -> Tool -> Prediction Task -> Data).
 
+
+Another way to see it:
+We start with a very broad goal, and end up with very specific, detailed data, where we have to decide which rows and columns to keep, what to use and so on.
+We start with very broad intentions and narrow down the task until it is fit for machine learning.
+With each narrowing, we are forced to specify our needs.
+With each decision we loose something from our original goal.
+We can even narrow down our goal so much that we end up with a wrong translation.
+
+
 # Sending Vouchers to Customers
 
 Imagine you manage a travel agency.
@@ -117,9 +126,71 @@ Maybe the city could be made more secure by educating the people, by increasing 
 
 Anyways, stop-and-frisk it is.
 But your police staff can't be everywhere, you have to send them to specific areas.
+Where to send them?
+Send them to where you think most crime will happen.
+This is a translation into a prediction task.
+
+**Prediction Task:** For each place and time, predict likelihood of a crime.
+
+A loss occurred: We could also predict who the most likely victims are or include the infromation which crimes are easily averted by presence and which not.
+
+The data to use for those predictions is quite obvious: use spatial and time data of crimes that already ocurred in that time.
+Additionally weather.
+
+**The Data:**: Recent crimes, along with geolocation and time. Additional data: weather, occurrence of other events (e.g. soccer games).
+
+
+Again, a loss occurred: We could have used completely different data sources that tell us more about the crime probabilities.
+For example mobile location data or social media posting.
+Also, by using the own crime data, there is a bias:
+The closer the police looks, the more crimes it sees.
+The other data might be dark:
+Crimes that were never reported.
+This loss is not reflected in our data, since we never expose our model to it, we only see the acurracy of predicting the crimes that we saw in the data.
 
 # Credit Scoring
+
+How can you trust someone to give you back money that you lend?
+The answer in our society is credit scoring agencies.
+In Germany the quasi-Monopoly is called the 'Schufa'.
+
 <img src='images/schufa.jpg' alt='' title='Working late to submit better predictions.'/>
+
+**Their goal:** Protect clients from credit risk.
+
+How do they do it?
+
+**Their tool:** Offer credit worthiness scores to lenders.
+
+A loss occurred: Scores are not the only tool, they could also insure the credit.
+They could allow lenders to deposit something.
+They could assess customers individually (which, of course, would be a lot of work).
+
+What does the score say?
+
+**The prediction task:** Probability of loan default within 1 year (not sure if SCHUFA uses exactly this, but let's assume for now)
+
+Sensible goal.
+Still a loss occurred: Loan defaults after one year would be ignored.
+From which data do we predict this?
+
+**The Data:** Not revealed what data the SCHUFA uses, but data they have: current contracts with e.g. mobile providers, mail-order companies, credits that have not been paid and so on.
+
+Loss in translation: Maybe a person never paid, e.g. because of an exploitve relationship, but this relationship is over.
+This is not reflected in the database.
+Also not in the data base: The people who don't get a loan in the first place, for whatever reason.
+Those never show up in the database.
+Self-reinforcing: People with a bad score don't get a loan.
+
+
+
+
+# Lost in Translation
+
+Every machine learning project has these decision that have to be made, which ultimately narrows down the question that can be answered.
+
+
+With this post, I hope I could make it more explicit how we have to narrow down our original goal to a very specific slice of data.
 
 
 
@@ -135,5 +206,6 @@ How that is done is crucial for the effectiviness of the model.
 
 Back to YouTube: You have the predictions...
 
+But this maybe for another blog post.
 
 
