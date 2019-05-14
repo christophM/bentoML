@@ -1,7 +1,8 @@
 ---
 title: "Lost In Translation"
 description: |
-  The loss between prediction and true outcome is not the only loss that occurs. Any machine learning model starts with a goal an institution or individual wants to solve, translated into a tool or process that helps with that goal, which again is translated into a prediction task, which is translated to data. This blog post proposes a mental tool to think on a high level about translating problems into prediction tasks.
+ The performance of a machine learning model depends on more than the loss on unseen test data. The training data is merely the end product of multiple translations: The data is used to solve a prediction task, which is part of a tool, which again serves a goal. This blog post explores the chain of translations and the loss that occurs between each step.
+
 author:
   - name: Christoph Molnar
 date: 04-15-2019
@@ -9,15 +10,53 @@ slug: loss
 output:
   radix::radix_article:
     self_contained: false
-preview: images/predictive-policing.png
+preview: images/translation-chain.png
 creative_commons: CC BY-NC
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+When we train machine learning models, we measure the loss that occurs between the true outcome and the model predictions.
+We focus on improving the loss, by trying out different models, by tuning the hyperparameters, by engineering the features.
+Improving the loss becomes our sole focus.
+The improvement in loss, the  gradient is not only backpropagated through the neural network, but also channeled through us.
+Greedily we descent to the optimum.
+Proudly we announce the end result.
 
-Predictive models solve problems.
+"Researchers found that human dermatologists accurately identified 86.6 percent of skin cancers from a range of images, compared to 95 percent for the CNN." - [engadget 2018](https://www.engadget.com/2018/05/29/ai-outperforms-human-doctors-in-spotting-skin-cancer)
+
+
+But what is the reason that high predictive performance is not a guarantee that the models are used in practice?
+One reason: The nature of machine learning learning predictions is very, very narrow.
+We have to make a lot of translations (i.e. narrow down the task), before we can solve it with machine learning.
+Our goal might be to be really good at spotting skin cancer, ... or ....
+But before we can do that, we first have to decide on the tool that we want to use to solve that problem.
+Taking images over time?
+Interactively chat with the patient?
+
+Once this step is decided, we have to narrow the tool down to a prediction task:
+Do we want to predict the likelihood that some mole is cancer?
+That it will develop to cancer within the next 6 years?
+Is it an image recognition task or do we also consider input from the patient?
+Should it be images from special cameras? Or maybe smartphones?
+
+Once we have settled this, we have to decide which data to take.
+Do we take data from one doctor only?
+Probably not.
+How many practices / hospitals do we need to make this generalize?
+Ah damn, we only get data from a couple of hospitals, but whatever.
+
+Now, finally, we can start to measure for the selected data how well we can predict the cancer label.
+
+Suddenly, your original goal of correctly identifying mole cancer narrowed down to:
+Predict cancer from doctors images.
+This dataset is biased https://arxiv.org/abs/1904.08818. 
+Also the "AI" does not beat the doctor, but it "might" be better at the very narrow task of classifying images.
+
+
+
+In the model training rabbit hole, it's easy to forget about the loss that occurred before: 
 As a data scientist, after you got the data, and do the modeling, it is easy to forget the whole pipeline that led you there, and only focus on the loss ocurring between features and target.
 
 Loss occurs way earlier.
@@ -32,6 +71,15 @@ Another goal could be to get more content creators onto the platform.
 
 First translations: From goal to a process or tool to achieve the goal.
 When you settled on a goal, you have to decide to achieve it. 
+
+**Goal:** Can be anything
+
+**Tool:** A product, a process. Some means to achieve that goal
+
+**Prediction Task:** Thing you want to predict
+
+**Data:** The data you use.
+
 
 In the remainder of the post we will go through a few examples how this translation steps look like with three examples: customer relationship management, predictive policing and credit scoring.
 
