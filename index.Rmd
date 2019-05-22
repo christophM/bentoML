@@ -1,6 +1,6 @@
 ---
 title: "bentoML Blog"
-site: radix::radix_website
+site: distill::distill_website
 listing: posts
 ---
 

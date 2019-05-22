@@ -7,8 +7,7 @@ author:
 date: 04-15-2019
 slug: hello
 output:
-  radix::radix_article:
-    self_contained: false
+  distill::distill_article
 preview: images/precious-f-small.jpeg
 creative_commons: CC BY-NC
 ---
