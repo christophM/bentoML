@@ -72,14 +72,16 @@ In the remainder of this post we will go through a few examples of translations:
 
 # Sending Vouchers to Customers
 
-
-<img src='images/vouchers.jpg' alt='' title='Sending vouchers to customers to increase sales.'/>
-
-
 Imagine you manage a travel agency.
 You sell trips to your customers.
 The customers are mostly very loyal customers, sometimes you have new customers.
 Business is not as good as it could be, so you hire a few data scientists.
+
+
+```{r, layout = "l-body-outset"}
+knitr::include_graphics("images/vouchers.jpg")
+```
+
 
 **Goal:** Sell more trips
 
@@ -123,10 +125,13 @@ These types of translation losses will not be visible in the model performance o
 
 # Predictive Policing
 
-<img src='images/predictive-policing.jpg' alt='' title='Working late to submit better predictions.'/>
-
 You are the head of the police department.
 The safety of the public lies within your responsible hands.
+
+```{r, layout = "l-body-outset"}
+knitr::include_graphics("images/predictive-policing.jpg")
+```
+
 
 **Goal:** Keep the city safe.
 
@@ -172,14 +177,17 @@ Translation loss due to these problems will not be reflected in our model perfor
 
 # Credit Scoring
 
-<img src='images/schufa.jpg' alt='' title='Working late to submit better predictions.'/>
-
 How can you trust someone to give you back borrowed money?
 The answer in many societies is credit scoring agencies.
 In Germany the company with a quasi-Monopoly on credit information is called SCHUFA.
-
-By the way, I visualized credit risk as birds in the above figure.
+By the way, I visualized credit risk as birds in the following figure.
 I hope that's cool with you.
+
+
+```{r, layout = "l-body-outset"}
+knitr::include_graphics("images/schufa.jpg")
+```
+
 
 **Goal:** Protect clients from credit risk.
 
