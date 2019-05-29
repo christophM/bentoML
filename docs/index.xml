@@ -6,8 +6,17 @@
     <atom:link href="https://bentoml.com/index.xml" rel="self" type="application/rss+xml"/>
     <description>A blog about machine learning beyond predictive performance.
 </description>
-    <generator>Radix</generator>
-    <lastBuildDate>Mon, 15 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Distill</generator>
+    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Lost In Translation</title>
+      <dc:creator>Christoph Molnar</dc:creator>
+      <link>https://bentoml.com/posts/2019-05-25-lost-in-translation</link>
+      <description>Machine learning learning is only good with very narrow and clearly defined tasks. We have to translate and narrow down our original goal several times before we can solve it with machine learning. This blog post examines the translation chain and the loss that occurs between each step.</description>
+      <guid>https://bentoml.com/posts/2019-05-25-lost-in-translation</guid>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://bentoml.com/posts/2019-05-25-lost-in-translation/images/translation-chain.png" medium="image" type="image/png" width="2000" height="1000"/>
+    </item>
     <item>
       <title>One Model to Rule Them All</title>
       <dc:creator>Christoph Molnar</dc:creator>

@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2019-05-25-lost-in-translation/",
+    "title": "Lost In Translation",
+    "description": "Machine learning learning is only good with very narrow and clearly defined tasks. We have to translate and narrow down our original goal several times before we can solve it with machine learning. This blog post examines the translation chain and the loss that occurs between each step.",
+    "author": [
+      {
+        "name": "Christoph Molnar",
+        "url": {}
+      }
+    ],
+    "date": "2019-05-29",
+    "categories": [],
+    "preview": "posts/2019-05-25-lost-in-translation/images/translation-chain.png",
+    "last_modified": "2019-05-29T14:47:33+01:00",
+    "preview_width": 2000,
+    "preview_height": 1000
+  },
+  {
     "path": "posts/2019-04-19-one-model/",
     "title": "One Model to Rule Them All",
     "description": "The machine learning community focuses too much on predictive performance. But machine learning models are always a small part of a complex system. This post discusses our obsession with finding the best model and emphasizes what we should do instead: Take a step back and see the bigger picture in which the machine learning model is embedded.",
@@ -12,6 +29,6 @@
     "date": "2019-04-15",
     "categories": [],
     "preview": "posts/2019-04-19-one-model/images/precious-f-small.jpeg",
-    "last_modified": "2019-04-25T17:08:01+01:00"
+    "last_modified": "2019-05-29T14:47:20+01:00"
   }
 ]
