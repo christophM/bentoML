@@ -7,8 +7,7 @@ author:
 date: 04-15-2019
 slug: hello
 output:
-  radix::radix_article:
-    self_contained: false
+  distill::distill_article
 preview: images/precious-f-small.jpeg
 creative_commons: CC BY-NC
 ---
@@ -126,7 +125,7 @@ Not to the team with a well performing, interpretable model.
 Not to the team with a model that trains in seconds instead of days.
 Not to the team with a model might that would actually have a chance to be used in production.
 The money goes to the teams with the highest predictive performance. 
-Her beliefs that machine learning really is just finding the best model are getting cemented.
+Her belief that machine learning really is just finding the best model is getting cemented.
 I mean, clearly, these are visibly the winners that get money and honor.
 
 <aside>

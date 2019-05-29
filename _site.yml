@@ -16,9 +16,11 @@ navbar:
     - text: "Impressum"
       href: impressum.html
 output:
-  radix::radix_article:
+  distill::distill_article:
     css: [css/form.css, css/radix.css, css/cookieconsent.min.css]
     javascript: js/cookieconsent.min.js
+    includes:
+      in_header: header.html
 collections:
   posts:
     disqus: bentoml
