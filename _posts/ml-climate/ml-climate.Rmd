@@ -1,0 +1,55 @@
+---
+title: "Machine Learning. Harm and Hope for the Climate Crisis."
+description: |
+  Is machine learning contributing to the climate crisis or is it a tool for the solution of the crisis?  
+author:
+  - name: Christoph Molnar
+date: 04-15-2019
+slug: hello
+output:
+  distill::distill_article
+preview: images/precious-f-small.jpeg
+creative_commons: CC BY-NC
+---
+
+What you find when you search for "Climate Change Machine Learning"
+
+- [Here are 10 ways AI could help fight climate change - MIT](https://www.technologyreview.com/s/613838/ai-climate-change-machine-learning/) 
+- [Machine Learning vs. Climate Change: AI for the Greener Good](https://singularityhub.com/2019/07/21/machine-learning-vs-climate-change-ai-for-the-greener-good/)
+- [Machine Learning May Be a Game-Changer for Climate Prediction](https://blogs.ei.columbia.edu/2018/06/21/machine-learning-may-game-changer-climate-prediction/)
+- [How artificial intelligence can tackle climate change](https://www.nationalgeographic.com/environment/2019/07/artificial-intelligence-climate-change/)
+
+The list goes on and on.
+Obviously, there are some areas that help mitigate climate change or adapt to it.
+And machine learning can help in those cases.
+
+But one question is: If you build general machine learning products, courses, books, tools, software, is your climate change impact negative or positive?
+Can we even know?
+Building tools is neutral.
+At least that's the first assumption.
+It can be used for good and bad.
+For meaningful and for wasteful things.
+But that's like lying to yourself.
+
+You are not submitting your products into the void.
+You let other people work with it.
+And there is a distribution of things they work on.
+
+
+
+Pro:
+
+- Tackling Climate Change with Machine Learning
+
+
+Neutral:
+
+- Medical Application etc.
+
+Negative:
+
+- More computation, more carbon dioxide.
+- 
+
+
+
